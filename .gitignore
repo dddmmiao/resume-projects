@@ -1,0 +1,26 @@
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# IDE和编辑器
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node.js
+node_modules/
+
+# 日志文件
+*.log
+
+# 演示图片
+*.gif
+
+# 项目配置文件夹
+*.cmproj/
+
+# Windsurf相关
+.windsurf_chat_port
+.windsurfrules
+90850560d7e2cc12/
