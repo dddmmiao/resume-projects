@@ -1,0 +1,749 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		503F3F022F2B19D200C56640 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503F3EFF2F2B19D200C56640 /* ContentView.swift */; };
+		503F3F032F2B19D200C56640 /* CyberBugOffApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503F3F002F2B19D200C56640 /* CyberBugOffApp.swift */; };
+		503F3F042F2B19D200C56640 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 503F3EFE2F2B19D200C56640 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50C09F4B2DFB0F480042763E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50C09F102DFB0F450042763E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50C09F3A2DFB0F470042763E;
+			remoteInfo = "CyberBugOff Watch App";
+		};
+		50C09F552DFB0F480042763E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50C09F102DFB0F450042763E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50C09F3A2DFB0F470042763E;
+			remoteInfo = "CyberBugOff Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		503F3CD12F2B17BC00C56640 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		503F3EEC2F2B195900C56640 /* CyberBugOff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyberBugOff.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		503F3EFE2F2B19D200C56640 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		503F3EFF2F2B19D200C56640 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		503F3F002F2B19D200C56640 /* CyberBugOffApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyberBugOffApp.swift; sourceTree = "<group>"; };
+		50C09F3B2DFB0F470042763E /* CyberBugOff Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CyberBugOff Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50C09F4A2DFB0F480042763E /* CyberBugOff Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CyberBugOff Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50C09F542DFB0F480042763E /* CyberBugOff Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CyberBugOff Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		50C09F3F2DFB0F470042763E /* CyberBugOff Watch App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "CyberBugOff Watch App"; sourceTree = "<group>"; };
+		50C09F4D2DFB0F480042763E /* CyberBugOff Watch AppTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "CyberBugOff Watch AppTests"; sourceTree = "<group>"; };
+		50C09F572DFB0F480042763E /* CyberBugOff Watch AppUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "CyberBugOff Watch AppUITests"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		503F3EE92F2B195900C56640 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50C09F382DFB0F470042763E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50C09F472DFB0F480042763E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50C09F512DFB0F480042763E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		503F3F012F2B19D200C56640 /* CyberBugOff iOS */ = {
+			isa = PBXGroup;
+			children = (
+				503F3EFE2F2B19D200C56640 /* Assets.xcassets */,
+				503F3EFF2F2B19D200C56640 /* ContentView.swift */,
+				503F3F002F2B19D200C56640 /* CyberBugOffApp.swift */,
+			);
+			path = "CyberBugOff iOS";
+			sourceTree = "<group>";
+		};
+		50C09F0E2DFB0F450042763E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50C09F3B2DFB0F470042763E /* CyberBugOff Watch App.app */,
+				50C09F4A2DFB0F480042763E /* CyberBugOff Watch AppTests.xctest */,
+				50C09F542DFB0F480042763E /* CyberBugOff Watch AppUITests.xctest */,
+				503F3EEC2F2B195900C56640 /* CyberBugOff.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50C09F0F2DFB0F450042763E = {
+			isa = PBXGroup;
+			children = (
+				50C09F3F2DFB0F470042763E /* CyberBugOff Watch App */,
+				50C09F4D2DFB0F480042763E /* CyberBugOff Watch AppTests */,
+				50C09F572DFB0F480042763E /* CyberBugOff Watch AppUITests */,
+				50C09F0E2DFB0F450042763E /* Products */,
+				503F3F012F2B19D200C56640 /* CyberBugOff iOS */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		503F3EEB2F2B195900C56640 /* CyberBugOff */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 503F3EF42F2B195B00C56640 /* Build configuration list for PBXNativeTarget "CyberBugOff" */;
+			buildPhases = (
+				503F3EE82F2B195900C56640 /* Sources */,
+				503F3EE92F2B195900C56640 /* Frameworks */,
+				503F3EEA2F2B195900C56640 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CyberBugOff;
+			packageProductDependencies = (
+			);
+			productName = CyberBugOff;
+			productReference = 503F3EEC2F2B195900C56640 /* CyberBugOff.app */;
+			productType = "com.apple.product-type.application";
+		};
+		50C09F3A2DFB0F470042763E /* CyberBugOff Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50C09F5E2DFB0F480042763E /* Build configuration list for PBXNativeTarget "CyberBugOff Watch App" */;
+			buildPhases = (
+				50C09F372DFB0F470042763E /* Sources */,
+				50C09F382DFB0F470042763E /* Frameworks */,
+				50C09F392DFB0F470042763E /* Resources */,
+				503F3CD12F2B17BC00C56640 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				50C09F3F2DFB0F470042763E /* CyberBugOff Watch App */,
+			);
+			name = "CyberBugOff Watch App";
+			packageProductDependencies = (
+			);
+			productName = "CyberBugOff Watch App";
+			productReference = 50C09F3B2DFB0F470042763E /* CyberBugOff Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		50C09F492DFB0F480042763E /* CyberBugOff Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50C09F6B2DFB0F480042763E /* Build configuration list for PBXNativeTarget "CyberBugOff Watch AppTests" */;
+			buildPhases = (
+				50C09F462DFB0F480042763E /* Sources */,
+				50C09F472DFB0F480042763E /* Frameworks */,
+				50C09F482DFB0F480042763E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50C09F4C2DFB0F480042763E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				50C09F4D2DFB0F480042763E /* CyberBugOff Watch AppTests */,
+			);
+			name = "CyberBugOff Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "CyberBugOff Watch AppTests";
+			productReference = 50C09F4A2DFB0F480042763E /* CyberBugOff Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		50C09F532DFB0F480042763E /* CyberBugOff Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50C09F6E2DFB0F480042763E /* Build configuration list for PBXNativeTarget "CyberBugOff Watch AppUITests" */;
+			buildPhases = (
+				50C09F502DFB0F480042763E /* Sources */,
+				50C09F512DFB0F480042763E /* Frameworks */,
+				50C09F522DFB0F480042763E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50C09F562DFB0F480042763E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				50C09F572DFB0F480042763E /* CyberBugOff Watch AppUITests */,
+			);
+			name = "CyberBugOff Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "CyberBugOff Watch AppUITests";
+			productReference = 50C09F542DFB0F480042763E /* CyberBugOff Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50C09F102DFB0F450042763E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1720;
+				TargetAttributes = {
+					503F3EEB2F2B195900C56640 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					50C09F3A2DFB0F470042763E = {
+						CreatedOnToolsVersion = 17.2;
+					};
+					50C09F492DFB0F480042763E = {
+						CreatedOnToolsVersion = 17.2;
+						TestTargetID = 50C09F3A2DFB0F470042763E;
+					};
+					50C09F532DFB0F480042763E = {
+						CreatedOnToolsVersion = 17.2;
+						TestTargetID = 50C09F3A2DFB0F470042763E;
+					};
+				};
+			};
+			buildConfigurationList = 50C09F132DFB0F450042763E /* Build configuration list for PBXProject "CyberBugOff" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 50C09F0F2DFB0F450042763E;
+			minimizedProjectReferenceProxies = 1;
+			productRefGroup = 50C09F0E2DFB0F450042763E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50C09F3A2DFB0F470042763E /* CyberBugOff Watch App */,
+				50C09F492DFB0F480042763E /* CyberBugOff Watch AppTests */,
+				50C09F532DFB0F480042763E /* CyberBugOff Watch AppUITests */,
+				503F3EEB2F2B195900C56640 /* CyberBugOff */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		503F3EEA2F2B195900C56640 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				503F3F042F2B19D200C56640 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50C09F392DFB0F470042763E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50C09F482DFB0F480042763E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50C09F522DFB0F480042763E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		503F3EE82F2B195900C56640 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				503F3F022F2B19D200C56640 /* ContentView.swift in Sources */,
+				503F3F032F2B19D200C56640 /* CyberBugOffApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50C09F372DFB0F470042763E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50C09F462DFB0F480042763E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50C09F502DFB0F480042763E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		50C09F4C2DFB0F480042763E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50C09F3A2DFB0F470042763E /* CyberBugOff Watch App */;
+			targetProxy = 50C09F4B2DFB0F480042763E /* PBXContainerItemProxy */;
+		};
+		50C09F562DFB0F480042763E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50C09F3A2DFB0F470042763E /* CyberBugOff Watch App */;
+			targetProxy = 50C09F552DFB0F480042763E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		503F3EF52F2B195B00C56640 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WQY3D49XM7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lvhaifeng.CyberBugOff;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		503F3EF62F2B195B00C56640 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WQY3D49XM7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lvhaifeng.CyberBugOff;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50C09F5F2DFB0F480042763E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WQY3D49XM7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CyberBugOff;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app needs access to microphone to record sounds.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app needs access to photo library to select images.";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haifenglv.CyberBugOff.watchapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		50C09F602DFB0F480042763E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WQY3D49XM7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CyberBugOff;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app needs access to microphone to record sounds.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app needs access to photo library to select images.";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haifenglv.CyberBugOff.watchapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		50C09F6C2DFB0F480042763E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WQY3D49XM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "CyberBugOff Watch AppTests";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haifenglv.CyberBugOff.watchkitapptests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CyberBugOff Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CyberBugOff Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		50C09F6D2DFB0F480042763E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WQY3D49XM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "CyberBugOff Watch AppTests";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haifenglv.CyberBugOff.watchkitapptests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CyberBugOff Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CyberBugOff Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		50C09F6F2DFB0F480042763E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WQY3D49XM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "CyberBugOff Watch AppUITests";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haifenglv.CyberBugOff.watchkitappuitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "CyberBugOff Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		50C09F702DFB0F480042763E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WQY3D49XM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "CyberBugOff Watch AppUITests";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haifenglv.CyberBugOff.watchkitappuitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "CyberBugOff Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		50C09F712DFB0F480042763E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		50C09F722DFB0F480042763E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		503F3EF42F2B195B00C56640 /* Build configuration list for PBXNativeTarget "CyberBugOff" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				503F3EF52F2B195B00C56640 /* Debug */,
+				503F3EF62F2B195B00C56640 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50C09F132DFB0F450042763E /* Build configuration list for PBXProject "CyberBugOff" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50C09F712DFB0F480042763E /* Debug */,
+				50C09F722DFB0F480042763E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50C09F5E2DFB0F480042763E /* Build configuration list for PBXNativeTarget "CyberBugOff Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50C09F5F2DFB0F480042763E /* Debug */,
+				50C09F602DFB0F480042763E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50C09F6B2DFB0F480042763E /* Build configuration list for PBXNativeTarget "CyberBugOff Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50C09F6C2DFB0F480042763E /* Debug */,
+				50C09F6D2DFB0F480042763E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50C09F6E2DFB0F480042763E /* Build configuration list for PBXNativeTarget "CyberBugOff Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50C09F6F2DFB0F480042763E /* Debug */,
+				50C09F702DFB0F480042763E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50C09F102DFB0F450042763E /* Project object */;
+}
