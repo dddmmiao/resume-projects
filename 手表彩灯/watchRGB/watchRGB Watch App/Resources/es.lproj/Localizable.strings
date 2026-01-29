@@ -1,0 +1,152 @@
+/* SettingsView */
+"settings.language" = "Idioma";
+"settings.language.current" = "%@";
+"settings.replay.tutorial" = "Reproducir tutorial";
+"settings.replay.tutorial.description" = "Ver el tutorial de nuevo";
+"settings.optimal.guide" = "Configuración óptima";
+"settings.optimal.guide.description" = "Mejorar tu experiencia";
+"settings.color.format" = "Formato de pantalla de color";
+"settings.membership.center" = "Membresía";
+"settings.membership.premium" = "Funciones premium desbloqueadas";
+"settings.membership.unlock" = "Desbloquear más funciones";
+"settings.reset" = "Restablecer configuración";
+"settings.about" = "Acerca de";
+"settings.about.version" = "Información de versión";
+"settings.reset.confirm.title" = "Restablecer configuración";
+"settings.reset.confirm.message" = "Todas las configuraciones se restaurarán a sus valores por defecto. Esta acción no se puede deshacer.";
+"settings.reset.confirm.cancel" = "Cancelar";
+"settings.reset.confirm.reset" = "Restablecer";
+"settings.reset.tutorial" = "Restablecer estado del tutorial";
+"settings.reset.tutorial.description" = "Mostrar de nuevo el tutorial de primer uso";
+"settings.shake.sensitivity" = "Sensibilidad de agitación";
+"settings.shake.description" = "Ajustar sensibilidad de detección";
+
+/* LanguageSettingsView */
+"language.title" = "Idioma";
+
+/* AboutView */
+"about.appName" = "Watch Pantalla Colorida";
+"about.version.number" = "Versión 1.0.0";
+"about.app.description" = "Aplicación de pantalla RGB colorida para Apple Watch";
+
+/* ColorFormatSettingsView */
+"color.format.title" = "Formato de color";
+"color.format.rgb" = "RGB";
+"color.format.rgb.description" = "Rojo, Verde, Azul";
+"color.format.cmyk" = "CMYK";
+"color.format.cmyk.description" = "Cian, Magenta, Amarillo, Negro";
+"color.format.hex" = "HEX";
+"color.format.hex.description" = "Color hexadecimal";
+"color.format.emoji" = "Emoji";
+"color.format.emoji.description" = "Representación por emoji";
+
+/* MembershipCenterView */
+"membership.premium.title" = "Miembro Premium";
+"membership.upgrade.title" = "Actualizar a Premium";
+"membership.premium.description" = "Disfruta de todas las funciones premium";
+"membership.upgrade.description" = "Desbloquear todas las funciones premium";
+"membership.features.title" = "Funciones Premium:";
+"membership.feature.breathing" = "Modo respiración";
+"membership.feature.breathing.description" = "Múltiples efectos de respiración";
+"membership.feature.rgb" = "Selector RGB";
+"membership.feature.rgb.description" = "Ajuste preciso de colores";
+"membership.feature.emoji" = "Selector de emoji";
+"membership.feature.emoji.description" = "Colores divertidos de emoji";
+"membership.feature.colorFormat" = "Múltiples formatos de color";
+"membership.feature.colorFormat.description" = "RGB, HEX y más";
+"membership.feature.shake" = "Agitar aleatorio";
+"membership.feature.shake.description" = "Colores aleatorios agitando";
+"membership.feature.shakeSensitivity" = "Sensibilidad de agitación";
+"membership.feature.shakeSensitivity.description" = "Ajustar sensibilidad";
+"membership.unlock.button" = "Desbloquear Premium";
+"membership.unlock.button.price" = "Desbloquear Premium %@";
+"membership.unlocked.status" = "Eres miembro Premium";
+"membership.purchasing" = "Comprando...";
+"membership.loading.products" = "Cargando...";
+"membership.loading.retry" = "Reintentar";
+"membership.restore.purchases" = "Restaurar compras";
+"membership.purchase.error.title" = "Error de compra";
+"membership.restore.confirm.title" = "Restaurar compras";
+"membership.restore.confirm.message" = "Intentará restaurar tus compras anteriores";
+"membership.restore.confirm.cancel" = "Cancelar";
+"membership.restore.confirm.restore" = "Restaurar";
+
+/* Optimal Settings Guide */
+"optimal.settings.always.on.simple" = "Mantener pantalla encendida";
+"optimal.settings.always.on.path" = "Ajustes → Pantalla y brillo → Siempre activada";
+"optimal.settings.return.crown.simple" = "Mantener app activa";
+"optimal.settings.return.crown.path" = "Ajustes → General → Volver a la esfera → Después de 1 hora";
+"optimal.settings.path.label" = "Ruta de ajustes：";
+"optimal.settings.got.it" = "Entendido";
+
+/* Common */
+"common.ok" = "OK";
+"common.cancel" = "Cancelar";
+
+/* Toast Messages */
+"toast.settings.resetted" = "Configuración restablecida";
+"toast.purchase.success" = "¡Compra exitosa!";
+"toast.language.switched.title" = "Idioma cambiado";
+"toast.language.switched.subtitle" = "Reiniciar para aplicar";
+"toast.premium.required" = "Premium requerido";
+"toast.color.index" = "%d/%d";
+"toast.no.editable.color" = "Sin color editable";
+"toast.color.deleted" = "Color eliminado";
+"toast.color.updated" = "Color actualizado";
+"toast.breathing.speed.slower" = "Respiración más lenta";
+"toast.breathing.speed.faster" = "Respiración más rápida";
+"toast.breathing.speed.default" = "Velocidad por defecto";
+"toast.breathing.min.colors" = "Se requieren al menos dos colores";
+"toast.return.to.breathing.mode" = "Volver al modo respiración";
+"toast.color.added.success" = "Color añadido";
+"toast.tutorial.completed" = "¡Bienvenido a Watch Pantalla Colorida!";
+
+/* Epilepsy warning */
+"epilepsy.warning.title" = "Advertencia de epilepsia fotosensible";
+"epilepsy.warning.message" = "Las pantallas que parpadean rápidamente pueden desencadenar convulsiones en personas con epilepsia fotosensible.";
+"epilepsy.warning.continue" = "Continuar";
+"epilepsy.warning.cancel" = "Cancelar";
+
+/* Modes */
+"mode.solidColor" = "Modo color sólido";
+"mode.breathing" = "Modo respiración";
+
+/* Breathing Modes */
+"breathing.mode.warm" = "Llama de aurora";
+"breathing.mode.cool" = "Océano profundo";
+"breathing.mode.rainbow" = "Pantalla arcoíris";
+"breathing.mode.forest" = "Bosque esmeralda";
+"breathing.mode.ocean" = "Mares azules";
+"breathing.mode.sunset" = "Resplandor del atardecer";
+"breathing.mode.neon" = "Cyberpunk";
+"breathing.mode.pastel" = "Pastel soñador";
+"breathing.mode.monochrome" = "Arte monocromo";
+"breathing.mode.stellar" = "Sueños estelares";
+"breathing.mode.celestial" = "Palacio celestial";
+"breathing.mode.mystic" = "Reino místico";
+"breathing.mode.platinum" = "Leyenda platino";
+"breathing.mode.phantom" = "Niebla fantasma";
+"breathing.mode.aurora" = "Danza aurora";
+"breathing.mode.crystal" = "Templo cristal";
+"breathing.mode.custom" = "Personalizado";
+
+/* TutorialReplayView */
+"tutorial.step.welcome.title" = "Bienvenido";
+"tutorial.step.welcome.description" = "Aplicación de pantalla RGB colorida para Apple Watch";
+"tutorial.step.swipe.title" = "Cambiar colores";
+"tutorial.step.swipe.description" = "Desliza a izquierda o derecha para cambiar colores";
+"tutorial.step.brightness.title" = "Ajustar brillo";
+"tutorial.step.brightness.description" = "Gira la Digital Crown para ajustar el brillo";
+"tutorial.step.shake.title" = "Color aleatorio";
+"tutorial.step.shake.description" = "Agita tu reloj para obtener un color aleatorio";
+"tutorial.step.editor.title" = "Seleccionar color";
+"tutorial.step.editor.description" = "Toca dos veces para abrir el editor y elegir un color personalizado";
+"tutorial.step.breathing.title" = "Modo respiración";
+"tutorial.step.breathing.description" = "Mantén presionado para alternar el modo respiración";
+"tutorial.step.settings.title" = "Más configuraciones";
+"tutorial.step.settings.description" = "Toca el botón de configuración para entrar al centro de configuración";
+"tutorial.step.done.title" = "Terminado";
+"tutorial.step.done.description" = "¡Comencemos!";
+"tutorial.button.skip" = "Omitir";
+"tutorial.button.next" = "Siguiente";
+"tutorial.button.done" = "Terminado";

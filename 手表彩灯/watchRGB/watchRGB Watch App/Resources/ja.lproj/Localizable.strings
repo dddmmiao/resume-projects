@@ -1,0 +1,149 @@
+/* SettingsView */
+"settings.language" = "言語";
+"settings.language.current" = "%@";
+"settings.replay.tutorial" = "チュートリアル再生";
+"settings.replay.tutorial.description" = "チュートリアルを再度視聴";
+"settings.optimal.guide" = "最適設定";
+"settings.optimal.guide.description" = "使用体験を向上";
+"settings.color.format" = "色形式表示";
+"settings.membership.center" = "メンバーシップ";
+"settings.membership.premium" = "プレミアム機能解除済み";
+"settings.membership.unlock" = "より多くの機能を解除";
+"settings.reset" = "設定リセット";
+"settings.about" = "について";
+"settings.about.version" = "バージョン情報";
+"settings.reset.confirm.title" = "設定リセット";
+"settings.reset.confirm.message" = "すべての設定がデフォルト値に戻ります。この操作は元に戻せません。";
+"settings.reset.confirm.cancel" = "キャンセル";
+"settings.reset.confirm.reset" = "リセット";
+"settings.shake.sensitivity" = "シェイク感度";
+"settings.shake.description" = "検出感度を調整";
+
+/* LanguageSettingsView */
+"language.title" = "言語";
+
+/* AboutView */
+"about.appName" = "ウォッチカラー画面";
+"about.version.number" = "バージョン 1.0.0";
+"about.app.description" = "Apple Watch専用のRGBカラー画面アプリ";
+
+/* ColorFormatSettingsView */
+"color.format.title" = "色形式";
+"color.format.rgb" = "RGB";
+"color.format.rgb.description" = "赤、緑、青";
+"color.format.hex" = "HEX";
+"color.format.hex.description" = "16進数カラー";
+"color.format.emoji" = "絵文字";
+"color.format.emoji.description" = "絵文字表示";
+
+/* MembershipCenterView */
+"membership.premium.title" = "プレミアム会員";
+"membership.upgrade.title" = "プレミアムにアップグレード";
+"membership.premium.description" = "すべてのプレミアム機能をお楽しみください";
+"membership.upgrade.description" = "すべてのプレミアム機能を解除";
+"membership.features.title" = "プレミアム機能:";
+"membership.feature.breathing" = "呼吸モード";
+"membership.feature.breathing.description" = "複数の呼吸エフェクト";
+"membership.feature.rgb" = "RGBカラーピッカー";
+"membership.feature.rgb.description" = "精密な色調整";
+"membership.feature.emoji" = "絵文字セレクタ";
+"membership.feature.emoji.description" = "楽しい絵文字カラー";
+"membership.feature.colorFormat" = "複数の色形式";
+"membership.feature.colorFormat.description" = "RGB、HEXなど";
+"membership.feature.shake" = "シェイクランダム";
+"membership.feature.shake.description" = "シェイクでランダムカラー";
+"membership.feature.shakeSensitivity" = "シェイク感度";
+"membership.feature.shakeSensitivity.description" = "シェイク感度を調整";
+"membership.unlock.button" = "プレミアム解除";
+"membership.unlock.button.price" = "プレミアム解除 %@";
+"membership.unlocked.status" = "プレミアム会員です";
+"membership.purchasing" = "購入中...";
+"membership.loading.products" = "読み込み中...";
+"membership.loading.retry" = "再試行";
+"membership.restore.purchases" = "購入復元";
+"membership.purchase.error.title" = "購入失敗";
+"membership.restore.confirm.title" = "購入復元";
+"membership.restore.confirm.message" = "以前の購入記録の復元を試行します";
+"membership.restore.confirm.cancel" = "キャンセル";
+"membership.restore.confirm.restore" = "復元";
+
+/* Optimal Settings Guide */
+"optimal.settings.always.on.simple" = "画面を常時表示";
+"optimal.settings.always.on.path" = "設定 → 画面表示と明るさ → 常時表示";
+"optimal.settings.return.crown.simple" = "アプリ表示を保持";
+"optimal.settings.return.crown.path" = "設定 → 一般 → 文字盤に戻る → 1時間後";
+"optimal.settings.path.label" = "設定パス：";
+"optimal.settings.got.it" = "了解";
+
+/* Common */
+"common.ok" = "OK";
+"common.cancel" = "キャンセル";
+
+/* Toast Messages */
+"toast.settings.resetted" = "設定がリセットされました";
+"toast.purchase.success" = "購入成功！";
+"toast.language.switched.title" = "言語が切り替わりました";
+"toast.language.switched.subtitle" = "再起動で有効";
+"toast.premium.required" = "プレミアム必要";
+"toast.color.index" = "%d/%d";
+"toast.no.editable.color" = "編集可能な色がありません";
+"toast.color.deleted" = "色を削除しました";
+"toast.color.updated" = "色を更新しました";
+"toast.breathing.speed.slower" = "呼吸を遅く";
+"toast.breathing.speed.faster" = "呼吸を速く";
+"toast.breathing.speed.default" = "デフォルト速度";
+"toast.breathing.min.colors" = "最低2色必要です";
+"toast.return.to.breathing.mode" = "呼吸モードに戻る";
+"toast.color.added.success" = "色を追加しました";
+"toast.tutorial.completed" = "ウォッチカラー画面へようこそ！";
+
+/* Epilepsy warning */
+"epilepsy.warning.title" = "光過敏性てんかん警告";
+"epilepsy.warning.message" = "高速点滅する画面は光過敏性てんかん患者の発作を誘発する可能性があります。";
+"epilepsy.warning.continue" = "続行";
+"epilepsy.warning.cancel" = "キャンセル";
+
+/* Modes */
+"mode.solidColor" = "単色モード";
+"mode.breathing" = "呼吸モード";
+
+/* Breathing Modes */
+"breathing.mode.warm" = "オーロラ炎";
+"breathing.mode.cool" = "深海幻境";
+"breathing.mode.rainbow" = "虹の表示";
+"breathing.mode.forest" = "エメラルドの森";
+"breathing.mode.ocean" = "蒼い海";
+"breathing.mode.sunset" = "夕焼けの輝き";
+"breathing.mode.neon" = "サイバーパンク";
+"breathing.mode.pastel" = "夢幻パステル";
+"breathing.mode.monochrome" = "モノクロアート";
+"breathing.mode.stellar" = "星の夢";
+"breathing.mode.celestial" = "天界宮殿";
+"breathing.mode.mystic" = "神秘領域";
+"breathing.mode.platinum" = "白金伝説";
+"breathing.mode.phantom" = "幻霧";
+"breathing.mode.aurora" = "極光舞踏";
+"breathing.mode.crystal" = "水晶神殿";
+"breathing.mode.custom" = "カスタム";
+
+/* TutorialReplayView */
+"tutorial.step.welcome.title" = "ようこそ";
+"tutorial.step.welcome.description" = "Apple Watch専用のRGBカラー画面アプリ";
+"tutorial.step.swipe.title" = "色の切り替え";
+"tutorial.step.swipe.description" = "左右にスワイプして色を切り替えます";
+"tutorial.step.brightness.title" = "明るさの調整";
+"tutorial.step.brightness.description" = "デジタルクラウンを回して明るさを調整します";
+"tutorial.step.shake.title" = "ランダムカラー";
+"tutorial.step.shake.description" = "時計を振ってランダムな色を取得します";
+"tutorial.step.editor.title" = "色の選択";
+"tutorial.step.editor.description" = "ダブルタップしてエディタを開き、カスタムカラーを選択します";
+"tutorial.step.breathing.title" = "呼吸モード";
+"tutorial.step.breathing.description" = "長押しして呼吸モードを切り替えます";
+"tutorial.step.settings.title" = "その他の設定";
+"tutorial.step.settings.description" = "設定ボタンをタップして設定センターに入ります";
+"tutorial.step.done.title" = "完了";
+"tutorial.step.done.description" = "始めましょう！";
+"tutorial.button.skip" = "スキップ";
+"tutorial.button.next" = "次へ";
+"tutorial.button.done" = "完了";
+

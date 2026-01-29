@@ -1,0 +1,115 @@
+{
+  "identifier" : "7C4F9A6B",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "6737863527",
+      "localizations" : [
+        {
+          "description" : "Unlock all premium features including RGB color picker, emoji selector, breathing mode, multiple color formats, and shake to random color.",
+          "displayName" : "Premium Unlock",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "解锁所有高级功能，包括RGB调色器、表情选择器、呼吸模式、多种颜色格式和摇晃随机颜色。",
+          "displayName" : "高级功能解锁",
+          "locale" : "zh_CN"
+        },
+        {
+          "description" : "すべてのプレミアム機能を解除：RGBカラーピッカー、絵文字セレクタ、呼吸モード、複数の色形式、シェイクランダム。",
+          "displayName" : "プレミアム解除",
+          "locale" : "ja"
+        },
+        {
+          "description" : "모든 프리미엄 기능 해제: RGB 컬러 피커, 이모지 선택기, 호흡 모드, 다양한 색상 형식, 흔들기 랜덤.",
+          "displayName" : "프리미엄 해제",
+          "locale" : "ko"
+        },
+        {
+          "description" : "Débloquez toutes les fonctionnalités premium : sélecteur RGB, sélecteur d'emoji, mode respiration, formats de couleurs multiples et secousse aléatoire.",
+          "displayName" : "Déblocage Premium",
+          "locale" : "fr"
+        },
+        {
+          "description" : "Desbloquear todas las funciones premium: selector RGB, selector de emoji, modo respiración, múltiples formatos de color y agitar aleatorio.",
+          "displayName" : "Desbloqueo Premium",
+          "locale" : "es"
+        },
+        {
+          "description" : "Alle Premium-Funktionen freischalten: RGB-Farbwähler, Emoji-Selektor, Atemmodus, mehrere Farbformate und Schüttel-Zufallsfarbe.",
+          "displayName" : "Premium Freischaltung",
+          "locale" : "de"
+        }
+      ],
+      "productID" : "watchrgb_premium_unlock",
+      "referenceName" : "Premium Unlock",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6737863528",
+    "_developerTeamID" : "WQY3D49XM7",
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 748440247.59056401,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+} 

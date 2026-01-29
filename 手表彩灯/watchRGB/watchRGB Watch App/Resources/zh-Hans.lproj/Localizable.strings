@@ -1,0 +1,150 @@
+/* SettingsView */
+"settings.language" = "语言";
+"settings.language.current" = "%@";
+"settings.replay.tutorial" = "重播引导";
+"settings.replay.tutorial.description" = "重新观看教程";
+"settings.optimal.guide" = "最佳设置";
+"settings.optimal.guide.description" = "优化使用体验";
+"settings.color.format" = "颜色格式显示";
+"settings.membership.center" = "会员中心";
+"settings.membership.premium" = "已解锁高级功能";
+"settings.membership.unlock" = "解锁更多功能";
+"settings.reset" = "重置设置";
+"settings.about" = "关于";
+"settings.about.version" = "版本信息";
+"settings.reset.confirm.title" = "重置设置";
+"settings.reset.confirm.message" = "所有设置将恢复为默认值，此操作不可撤销。";
+"settings.reset.confirm.cancel" = "取消";
+"settings.reset.confirm.reset" = "重置";
+"settings.shake.sensitivity" = "摇晃灵敏度";
+"settings.shake.description" = "调整检测灵敏度";
+
+/* LanguageSettingsView */
+"language.title" = "语言";
+
+/* AboutView */
+"about.appName" = "手表彩屏";
+"about.version.number" = "版本 1.0.0";
+"about.app.description" = "专为Apple Watch设计的RGB彩色屏幕应用";
+
+/* ColorFormatSettingsView */
+"color.format.title" = "颜色格式";
+"color.format.rgb" = "RGB";
+"color.format.rgb.description" = "红绿蓝三原色";
+
+"color.format.hex" = "HEX";
+"color.format.hex.description" = "十六进制颜色";
+"color.format.emoji" = "表情";
+"color.format.emoji.description" = "表情符号表示";
+
+/* MembershipCenterView */
+"membership.premium.title" = "已是高级会员";
+"membership.upgrade.title" = "升级高级会员";
+"membership.premium.description" = "畅享所有高级功能";
+"membership.upgrade.description" = "解锁全部高级功能";
+"membership.features.title" = "高级功能:";
+"membership.feature.breathing" = "呼吸模式";
+"membership.feature.breathing.description" = "多种呼吸动效";
+"membership.feature.rgb" = "RGB调色器";
+"membership.feature.rgb.description" = "精确调节颜色";
+"membership.feature.emoji" = "表情选择器";
+"membership.feature.emoji.description" = "有趣的颜色表情";
+"membership.feature.colorFormat" = "多种颜色格式";
+"membership.feature.colorFormat.description" = "RGB、HEX等格式";
+"membership.feature.shake" = "摇晃随机";
+"membership.feature.shake.description" = "摇晃获取随机颜色";
+"membership.feature.shakeSensitivity" = "摇晃灵敏度";
+"membership.feature.shakeSensitivity.description" = "调节摇晃灵敏度";
+"membership.unlock.button" = "解锁高级功能";
+"membership.unlock.button.price" = "解锁高级功能 %@";
+"membership.unlocked.status" = "您已是高级会员";
+"membership.purchasing" = "购买中...";
+"membership.loading.products" = "加载中...";
+"membership.loading.retry" = "重试";
+"membership.restore.purchases" = "恢复购买";
+"membership.purchase.error.title" = "购买失败";
+"membership.restore.confirm.title" = "恢复购买";
+"membership.restore.confirm.message" = "将尝试恢复您之前的购买记录";
+"membership.restore.confirm.cancel" = "取消";
+"membership.restore.confirm.restore" = "恢复";
+
+/* Optimal Settings Guide */
+"optimal.settings.always.on.simple" = "保持屏幕常亮";
+"optimal.settings.always.on.path" = "设置 → 显示与亮度 → 全天候显示";
+"optimal.settings.return.crown.simple" = "保持应用显示";
+"optimal.settings.return.crown.path" = "设置 → 通用 → 返回表盘 → 1小时后";
+"optimal.settings.path.label" = "设置路径：";
+"optimal.settings.got.it" = "知道了";
+
+/* Common */
+"common.ok" = "确定";
+"common.cancel" = "取消";
+
+/* Toast Messages */
+"toast.settings.resetted" = "设置已重置";
+"toast.purchase.success" = "购买成功！";
+"toast.language.switched.title" = "语言已切换";
+"toast.language.switched.subtitle" = "重启生效";
+"toast.premium.required" = "需要会员权限";
+"toast.color.index" = "%d/%d";
+"toast.no.editable.color" = "没有可编辑的颜色";
+"toast.color.deleted" = "颜色已删除";
+"toast.color.updated" = "颜色已更新";
+"toast.breathing.speed.slower" = "呼吸减慢";
+"toast.breathing.speed.faster" = "呼吸加快";
+"toast.breathing.speed.default" = "默认速度";
+"toast.breathing.min.colors" = "至少需要保留两个颜色";
+"toast.return.to.breathing.mode" = "返回呼吸模式";
+"toast.color.added.success" = "颜色新增成功";
+
+/* Epilepsy warning */
+"epilepsy.warning.title" = "光敏性癫痫警告";
+"epilepsy.warning.message" = "快速闪烁的屏幕可能会引发光敏性癫痫患者的癫痫发作。";
+"epilepsy.warning.continue" = "继续";
+"epilepsy.warning.cancel" = "取消";
+
+/* Modes */
+"mode.solidColor" = "单色模式";
+"mode.breathing" = "呼吸模式";
+
+/* Breathing Modes */
+"breathing.mode.warm" = "极光之焰";
+"breathing.mode.cool" = "深海幻境";
+"breathing.mode.rainbow" = "彩虹之光";
+"breathing.mode.forest" = "翡翠森林";
+"breathing.mode.ocean" = "碧海蓝天";
+"breathing.mode.sunset" = "晚霞余晖";
+"breathing.mode.neon" = "赛博朋克";
+"breathing.mode.pastel" = "梦幻粉彩";
+"breathing.mode.monochrome" = "黑白艺术";
+"breathing.mode.stellar" = "星际之梦";
+"breathing.mode.celestial" = "紫薇星宫";
+"breathing.mode.mystic" = "翡翠秘境";
+"breathing.mode.platinum" = "白金传说";
+"breathing.mode.phantom" = "幻影迷雾";
+"breathing.mode.aurora" = "极光幻舞";
+"breathing.mode.crystal" = "水晶圣殿";
+"breathing.mode.custom" = "个性定制";
+
+/* TutorialReplayView */
+"tutorial.step.welcome.title" = "欢迎使用";
+"tutorial.step.welcome.description" = "专为Apple Watch设计的RGB彩色屏幕应用";
+"tutorial.step.swipe.title" = "切换颜色";
+"tutorial.step.swipe.description" = "左右滑动屏幕，切换颜色";
+"tutorial.step.brightness.title" = "调节亮度";
+"tutorial.step.brightness.description" = "旋转数字表冠，调节屏幕亮度";
+"tutorial.step.shake.title" = "随机一项";
+"tutorial.step.shake.description" = "摇晃手表，随机切换颜色";
+"tutorial.step.editor.title" = "选择颜色";
+"tutorial.step.editor.description" = "双击屏幕打开编辑器，选择自定义颜色";
+"tutorial.step.breathing.title" = "呼吸模式";
+"tutorial.step.breathing.description" = "长按屏幕切换呼吸模式";
+"tutorial.step.settings.title" = "更多设置";
+"tutorial.step.settings.description" = "点击设置按钮，进入设置中心";
+"tutorial.step.done.title" = "完成";
+"tutorial.step.done.description" = "开始体验吧！";
+"tutorial.button.skip" = "跳过";
+"tutorial.button.next" = "下一步";
+"tutorial.button.done" = "完成";
+
+"toast.tutorial.completed" = "欢迎使用手表彩屏！";

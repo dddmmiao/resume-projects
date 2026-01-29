@@ -1,0 +1,148 @@
+/* SettingsView */
+"settings.language" = "Language";
+"settings.language.current" = "%@";
+"settings.replay.tutorial" = "Replay Tutorial";
+"settings.replay.tutorial.description" = "Watch the tutorial again";
+"settings.optimal.guide" = "Optimal Settings";
+"settings.optimal.guide.description" = "Enhance your experience";
+"settings.color.format" = "Color Format Display";
+"settings.membership.center" = "Membership";
+"settings.membership.premium" = "Premium Features Unlocked";
+"settings.membership.unlock" = "Unlock More Features";
+"settings.reset" = "Reset Settings";
+"settings.about" = "About";
+"settings.about.version" = "Version Info";
+"settings.reset.confirm.title" = "Reset Settings";
+"settings.reset.confirm.message" = "All settings will be restored to their default values. This action cannot be undone.";
+"settings.reset.confirm.cancel" = "Cancel";
+"settings.reset.confirm.reset" = "Reset";
+"settings.shake.sensitivity" = "Shake Sensitivity";
+"settings.shake.description" = "Adjust detection sensitivity";
+
+/* LanguageSettingsView */
+"language.title" = "Language";
+
+/* AboutView */
+"about.appName" = "Watch Colorful Screen";
+"about.version.number" = "Version 1.0.0";
+"about.app.description" = "RGB colorful screen app designed for Apple Watch.";
+
+/* ColorFormatSettingsView */
+"color.format.title" = "Color Format";
+"color.format.rgb" = "RGB";
+"color.format.rgb.description" = "Red, Green, Blue";
+"color.format.hex" = "HEX";
+"color.format.hex.description" = "Hexadecimal color";
+"color.format.emoji" = "Emoji";
+"color.format.emoji.description" = "Representation by emoji";
+
+/* MembershipCenterView */
+"membership.premium.title" = "Premium Member";
+"membership.upgrade.title" = "Upgrade to Premium";
+"membership.premium.description" = "Enjoy all premium features";
+"membership.upgrade.description" = "Unlock all premium features";
+"membership.features.title" = "Premium Features:";
+"membership.feature.breathing" = "Breathing Mode";
+"membership.feature.breathing.description" = "Multiple breathing effects";
+"membership.feature.rgb" = "RGB Color Picker";
+"membership.feature.rgb.description" = "Precise color adjustment";
+"membership.feature.emoji" = "Emoji Selector";
+"membership.feature.emoji.description" = "Fun emoji colors";
+"membership.feature.colorFormat" = "Multiple Color Formats";
+"membership.feature.colorFormat.description" = "RGB, HEX and more";
+"membership.feature.shake" = "Shake Random";
+"membership.feature.shake.description" = "Get random colors by shaking";
+"membership.feature.shakeSensitivity" = "Shake Sensitivity";
+"membership.feature.shakeSensitivity.description" = "Adjust shake sensitivity";
+"membership.unlock.button" = "Unlock Premium";
+"membership.unlock.button.price" = "Unlock Premium %@";
+"membership.unlocked.status" = "You are a Premium Member";
+"membership.purchasing" = "Purchasing...";
+"membership.loading.products" = "Loading...";
+"membership.loading.retry" = "Retry";
+"membership.restore.purchases" = "Restore Purchases";
+"membership.purchase.error.title" = "Purchase Failed";
+"membership.restore.confirm.title" = "Restore Purchases";
+"membership.restore.confirm.message" = "Will attempt to restore your previous purchases";
+"membership.restore.confirm.cancel" = "Cancel";
+"membership.restore.confirm.restore" = "Restore";
+
+/* Optimal Settings Guide */
+"optimal.settings.always.on.simple" = "Keep Screen Always On";
+"optimal.settings.always.on.path" = "Settings → Display & Brightness → Always On";
+"optimal.settings.return.crown.simple" = "Keep App Active";
+"optimal.settings.return.crown.path" = "Settings → General → Return to Watch Face → After 1 Hour";
+"optimal.settings.path.label" = "Settings Path:";
+"optimal.settings.got.it" = "Got It";
+
+/* Common */
+"common.ok" = "OK";
+"common.cancel" = "Cancel";
+
+/* Toast Messages */
+"toast.settings.resetted" = "Settings have been reset";
+"toast.purchase.success" = "Purchase successful!";
+"toast.language.switched.title" = "Language Switched";
+"toast.language.switched.subtitle" = "Restart to apply";
+"toast.premium.required" = "Premium Required";
+"toast.color.index" = "%d/%d";
+"toast.no.editable.color" = "No editable color";
+"toast.color.deleted" = "Color deleted";
+"toast.color.updated" = "Color updated";
+"toast.breathing.speed.slower" = "Breathing Slower";
+"toast.breathing.speed.faster" = "Breathing Faster";
+"toast.breathing.speed.default" = "Default Speed";
+"toast.breathing.min.colors" = "At least two colors are required";
+"toast.return.to.breathing.mode" = "Return to Breathing Mode";
+"toast.color.added.success" = "Color Added";
+"toast.tutorial.completed" = "Welcome to Watch Colorful Screen!";
+
+/* Epilepsy warning */
+"epilepsy.warning.title" = "Photosensitive Epilepsy Warning";
+"epilepsy.warning.message" = "Fast flashing screens may trigger seizures in individuals with photosensitive epilepsy.";
+"epilepsy.warning.continue" = "Continue";
+"epilepsy.warning.cancel" = "Cancel";
+
+/* Modes */
+"mode.solidColor" = "Solid Color Mode";
+"mode.breathing" = "Breathing Mode";
+
+/* Breathing Modes */
+"breathing.mode.warm" = "Aurora Flame";
+"breathing.mode.cool" = "Deep Ocean";
+"breathing.mode.rainbow" = "Rainbow Display";
+"breathing.mode.forest" = "Emerald Forest";
+"breathing.mode.ocean" = "Azure Seas";
+"breathing.mode.sunset" = "Sunset Glow";
+"breathing.mode.neon" = "Cyberpunk";
+"breathing.mode.pastel" = "Dreamy Pastel";
+"breathing.mode.monochrome" = "Monochrome Art";
+"breathing.mode.stellar" = "Stellar Dreams";
+"breathing.mode.celestial" = "Celestial Palace";
+"breathing.mode.mystic" = "Mystic Realm";
+"breathing.mode.platinum" = "Platinum Legend";
+"breathing.mode.phantom" = "Phantom Mist";
+"breathing.mode.aurora" = "Aurora Dance";
+"breathing.mode.crystal" = "Crystal Temple";
+"breathing.mode.custom" = "Custom";
+
+/* TutorialReplayView */
+"tutorial.step.welcome.title" = "Welcome";
+"tutorial.step.welcome.description" = "RGB colorful screen app designed for Apple Watch";
+"tutorial.step.swipe.title" = "Switch Colors";
+"tutorial.step.swipe.description" = "Swipe left or right to switch colors";
+"tutorial.step.brightness.title" = "Adjust Brightness";
+"tutorial.step.brightness.description" = "Turn the Digital Crown to adjust brightness";
+"tutorial.step.shake.title" = "Random Color";
+"tutorial.step.shake.description" = "Shake your watch to get a random color";
+"tutorial.step.editor.title" = "Select Color";
+"tutorial.step.editor.description" = "Double-tap to open the editor and pick a custom color";
+"tutorial.step.breathing.title" = "Breathing Mode";
+"tutorial.step.breathing.description" = "Long-press to toggle breathing mode";
+"tutorial.step.settings.title" = "More Settings";
+"tutorial.step.settings.description" = "Tap the settings button to enter the settings center";
+"tutorial.step.done.title" = "Done";
+"tutorial.step.done.description" = "Let's get started!";
+"tutorial.button.skip" = "Skip";
+"tutorial.button.next" = "Next";
+"tutorial.button.done" = "Done";

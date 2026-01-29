@@ -1,0 +1,152 @@
+/* SettingsView */
+"settings.language" = "언어";
+"settings.language.current" = "%@";
+"settings.replay.tutorial" = "튜토리얼 재생";
+"settings.replay.tutorial.description" = "튜토리얼 다시 보기";
+"settings.optimal.guide" = "최적 설정";
+"settings.optimal.guide.description" = "사용 경험 향상";
+"settings.color.format" = "색상 형식 표시";
+"settings.membership.center" = "멤버십";
+"settings.membership.premium" = "프리미엄 기능 해제됨";
+"settings.membership.unlock" = "더 많은 기능 해제";
+"settings.reset" = "설정 초기화";
+"settings.about" = "정보";
+"settings.about.version" = "버전 정보";
+"settings.reset.confirm.title" = "설정 초기화";
+"settings.reset.confirm.message" = "모든 설정이 기본값으로 복원됩니다. 이 작업은 되돌릴 수 없습니다.";
+"settings.reset.confirm.cancel" = "취소";
+"settings.reset.confirm.reset" = "초기화";
+"settings.reset.tutorial" = "튜토리얼 상태 재설정";
+"settings.reset.tutorial.description" = "첫 실행 튜토리얼 다시 표시";
+"settings.shake.sensitivity" = "흔들기 민감도";
+"settings.shake.description" = "감지 민감도 조정";
+
+/* LanguageSettingsView */
+"language.title" = "언어";
+
+/* AboutView */
+"about.appName" = "워치 컬러 화면";
+"about.version.number" = "버전 1.0.0";
+"about.app.description" = "Apple Watch 전용 RGB 컬러 화면 앱";
+
+/* ColorFormatSettingsView */
+"color.format.title" = "색상 형식";
+"color.format.rgb" = "RGB";
+"color.format.rgb.description" = "빨강, 초록, 파랑";
+"color.format.cmyk" = "CMYK";
+"color.format.cmyk.description" = "시안, 마젠타, 노랑, 검정";
+"color.format.hex" = "HEX";
+"color.format.hex.description" = "16진수 색상";
+"color.format.emoji" = "이모지";
+"color.format.emoji.description" = "이모지 표현";
+
+/* MembershipCenterView */
+"membership.premium.title" = "프리미엄 회원";
+"membership.upgrade.title" = "프리미엄으로 업그레이드";
+"membership.premium.description" = "모든 프리미엄 기능을 즐기세요";
+"membership.upgrade.description" = "모든 프리미엄 기능 해제";
+"membership.features.title" = "프리미엄 기능:";
+"membership.feature.breathing" = "호흡 모드";
+"membership.feature.breathing.description" = "다양한 호흡 효과";
+"membership.feature.rgb" = "RGB 컬러 피커";
+"membership.feature.rgb.description" = "정밀한 색상 조정";
+"membership.feature.emoji" = "이모지 선택기";
+"membership.feature.emoji.description" = "재미있는 이모지 색상";
+"membership.feature.colorFormat" = "다양한 색상 형식";
+"membership.feature.colorFormat.description" = "RGB, HEX 등";
+"membership.feature.shake" = "흔들기 랜덤";
+"membership.feature.shake.description" = "흔들어서 랜덤 색상";
+"membership.feature.shakeSensitivity" = "흔들기 민감도";
+"membership.feature.shakeSensitivity.description" = "민감도 조정";
+"membership.unlock.button" = "프리미엄 해제";
+"membership.unlock.button.price" = "프리미엄 해제 %@";
+"membership.unlocked.status" = "프리미엄 회원입니다";
+"membership.purchasing" = "구매 중...";
+"membership.loading.products" = "로딩 중...";
+"membership.loading.retry" = "다시 시도";
+"membership.restore.purchases" = "구매 복원";
+"membership.purchase.error.title" = "구매 실패";
+"membership.restore.confirm.title" = "구매 복원";
+"membership.restore.confirm.message" = "이전 구매 기록 복원을 시도합니다";
+"membership.restore.confirm.cancel" = "취소";
+"membership.restore.confirm.restore" = "복원";
+
+/* Optimal Settings Guide */
+"optimal.settings.always.on.simple" = "화면 항상 켜기";
+"optimal.settings.always.on.path" = "설정 → 디스플레이 및 밝기 → 항상 켜기";
+"optimal.settings.return.crown.simple" = "앱 표시 유지";
+"optimal.settings.return.crown.path" = "설정 → 일반 → 시계 페이스로 돌아가기 → 1시간 후";
+"optimal.settings.path.label" = "설정 경로：";
+"optimal.settings.got.it" = "알겠습니다";
+
+/* Common */
+"common.ok" = "확인";
+"common.cancel" = "취소";
+
+/* Toast Messages */
+"toast.settings.resetted" = "설정이 초기화되었습니다";
+"toast.purchase.success" = "구매 성공!";
+"toast.language.switched.title" = "언어가 변경되었습니다";
+"toast.language.switched.subtitle" = "재시작하여 적용";
+"toast.premium.required" = "프리미엄 필요";
+"toast.color.index" = "%d/%d";
+"toast.no.editable.color" = "편집 가능한 색상 없음";
+"toast.color.deleted" = "색상이 삭제되었습니다";
+"toast.color.updated" = "색상이 업데이트되었습니다";
+"toast.breathing.speed.slower" = "호흡 속도 감소";
+"toast.breathing.speed.faster" = "호흡 속도 증가";
+"toast.breathing.speed.default" = "기본 속도";
+"toast.breathing.min.colors" = "최소 2개의 색상이 필요합니다";
+"toast.return.to.breathing.mode" = "호흡 모드로 돌아가기";
+"toast.color.added.success" = "색상이 추가되었습니다";
+"toast.tutorial.completed" = "워치 컬러 화면에 오신 것을 환영합니다!";
+
+/* Epilepsy warning */
+"epilepsy.warning.title" = "광과민성 간질 경고";
+"epilepsy.warning.message" = "빠르게 깜박이는 화면은 광과민성 간질 환자에게 발작을 유발할 수 있습니다.";
+"epilepsy.warning.continue" = "계속";
+"epilepsy.warning.cancel" = "취소";
+
+/* Modes */
+"mode.solidColor" = "단색 모드";
+"mode.breathing" = "호흡 모드";
+
+/* Breathing Modes */
+"breathing.mode.warm" = "오로라 불꽃";
+"breathing.mode.cool" = "심해 환상";
+"breathing.mode.rainbow" = "무지개 화면";
+"breathing.mode.forest" = "에메랄드 숲";
+"breathing.mode.ocean" = "푸른 바다";
+"breathing.mode.sunset" = "석양의 색채";
+"breathing.mode.neon" = "사이버펑크";
+"breathing.mode.pastel" = "몽환 파스텔";
+"breathing.mode.monochrome" = "흑백 아트";
+"breathing.mode.stellar" = "성간의 꿈";
+"breathing.mode.celestial" = "자미성궁";
+"breathing.mode.mystic" = "신비 영역";
+"breathing.mode.platinum" = "백금 전설";
+"breathing.mode.phantom" = "환영 안개";
+"breathing.mode.aurora" = "극광 무도";
+"breathing.mode.crystal" = "수정 성전";
+"breathing.mode.custom" = "커스텀";
+
+/* TutorialReplayView */
+"tutorial.step.welcome.title" = "환영합니다";
+"tutorial.step.welcome.description" = "Apple Watch 전용 RGB 컬러 화면 앱";
+"tutorial.step.swipe.title" = "색상 전환";
+"tutorial.step.swipe.description" = "왼쪽이나 오른쪽으로 스와이프하여 색상 전환";
+"tutorial.step.brightness.title" = "밝기 조절";
+"tutorial.step.brightness.description" = "Digital Crown을 돌려 밝기 조절";
+"tutorial.step.shake.title" = "무작위 색상";
+"tutorial.step.shake.description" = "시계를 흔들어 무작위 색상 얻기";
+"tutorial.step.editor.title" = "색상 선택";
+"tutorial.step.editor.description" = "두 번 탭하여 편집기를 열고 사용자 지정 색상 선택";
+"tutorial.step.breathing.title" = "호흡 모드";
+"tutorial.step.breathing.description" = "길게 눌러 호흡 모드 전환";
+"tutorial.step.settings.title" = "추가 설정";
+"tutorial.step.settings.description" = "설정 버튼을 탭하여 설정 센터로 이동";
+"tutorial.step.done.title" = "완료";
+"tutorial.step.done.description" = "시작해 보세요!";
+"tutorial.button.skip" = "건너뛰기";
+"tutorial.button.next" = "다음";
+"tutorial.button.done" = "완료";
