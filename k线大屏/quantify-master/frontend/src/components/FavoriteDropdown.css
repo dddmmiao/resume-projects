@@ -1,0 +1,338 @@
+/* 自选分组下拉菜单主题样式 */
+
+/* 基础样式 - 下拉菜单挂载到body，通过JavaScript应用相同缩放跟随卡片 */
+.favorite-dropdown-light,
+.favorite-dropdown-dark,
+.favorite-dropdown-blue,
+.favorite-dropdown-purple,
+.favorite-dropdown-green,
+.favorite-dropdown-orange,
+.favorite-dropdown-cyan,
+.favorite-dropdown-red,
+.favorite-dropdown-gold {
+  /* 确保下拉菜单正确显示 */
+  z-index: 1050 !important;
+}
+
+/* 缩放后的菜单样式调整 */
+.favorite-dropdown-scaled .ant-dropdown-menu {
+  /* 确保菜单有合适的最小宽度 */
+  min-width: 140px !important;
+  /* 调整字体大小确保可读性 */
+  font-size: 14px !important;
+  /* 变换原点设置为右上角，保持与按钮的相对位置 */
+  transform-origin: top right !important;
+}
+
+/* 大屏卡片下拉菜单特殊样式 */
+.fullscreen-dropdown {
+  /* 确保在大屏模式下有足够高的z-index */
+  z-index: 10100 !important;
+}
+
+.fullscreen-dropdown .ant-dropdown-menu {
+  /* 确保菜单在大屏模式下正确显示 */
+  z-index: 10100 !important;
+  position: relative !important;
+  /* 确保菜单有合适的最小宽度 */
+  min-width: 140px !important;
+  /* 调整字体大小确保可读性 */
+  font-size: 14px !important;
+  /* 固定最大高度，超过6个分组时显示滚动条 */
+  max-height: 280px !important;
+  overflow-y: auto !important;
+}
+
+/* 大屏卡片中的自选按钮特殊处理 - 覆盖禁用交互的CSS */
+.fullscreen-card .ant-dropdown-trigger {
+  /* 恢复用户交互 */
+  user-select: auto !important;
+  -webkit-user-select: auto !important;
+  -moz-user-select: auto !important;
+  -ms-user-select: auto !important;
+  pointer-events: auto !important;
+  /* 确保按钮可以被点击 */
+  position: relative !important;
+  z-index: 10050 !important;
+}
+
+.fullscreen-card .ant-dropdown-trigger button {
+  /* 恢复按钮的用户交互 */
+  user-select: auto !important;
+  -webkit-user-select: auto !important;
+  -moz-user-select: auto !important;
+  -ms-user-select: auto !important;
+  pointer-events: auto !important;
+  /* 确保按钮可以被点击 */
+  position: relative !important;
+  z-index: 10050 !important;
+}
+
+/* 确保管理分组Modal显示在大屏卡片之上 */
+/* 由于Modal的zIndex属性会自动处理这些层级，这里只作为备用 */
+
+/* 确保toast消息在所有情况下都显示在最上层 */
+.ant-message {
+  z-index: 10300 !important;
+}
+
+.ant-message-notice {
+  z-index: 10300 !important;
+}
+
+/* 通用菜单样式 - 适用于所有主题 */
+.favorite-dropdown-light .ant-dropdown-menu,
+.favorite-dropdown-dark .ant-dropdown-menu,
+.favorite-dropdown-blue .ant-dropdown-menu,
+.favorite-dropdown-purple .ant-dropdown-menu,
+.favorite-dropdown-green .ant-dropdown-menu,
+.favorite-dropdown-orange .ant-dropdown-menu,
+.favorite-dropdown-cyan .ant-dropdown-menu,
+.favorite-dropdown-red .ant-dropdown-menu,
+.favorite-dropdown-gold .ant-dropdown-menu {
+  font-size: 14px !important;
+  min-width: 140px !important;
+  /* 固定最大高度，超过6个分组时显示滚动条 */
+  max-height: 280px !important;
+  overflow-y: auto !important;
+}
+
+/* 滚动条样式 - 适用于所有主题 */
+.favorite-dropdown-light .ant-dropdown-menu::-webkit-scrollbar,
+.favorite-dropdown-dark .ant-dropdown-menu::-webkit-scrollbar,
+.favorite-dropdown-blue .ant-dropdown-menu::-webkit-scrollbar,
+.favorite-dropdown-purple .ant-dropdown-menu::-webkit-scrollbar,
+.favorite-dropdown-green .ant-dropdown-menu::-webkit-scrollbar,
+.favorite-dropdown-orange .ant-dropdown-menu::-webkit-scrollbar,
+.favorite-dropdown-cyan .ant-dropdown-menu::-webkit-scrollbar,
+.favorite-dropdown-red .ant-dropdown-menu::-webkit-scrollbar,
+.favorite-dropdown-gold .ant-dropdown-menu::-webkit-scrollbar,
+.fullscreen-dropdown .ant-dropdown-menu::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.favorite-dropdown-light .ant-dropdown-menu::-webkit-scrollbar-track,
+.favorite-dropdown-dark .ant-dropdown-menu::-webkit-scrollbar-track,
+.favorite-dropdown-blue .ant-dropdown-menu::-webkit-scrollbar-track,
+.favorite-dropdown-purple .ant-dropdown-menu::-webkit-scrollbar-track,
+.favorite-dropdown-green .ant-dropdown-menu::-webkit-scrollbar-track,
+.favorite-dropdown-orange .ant-dropdown-menu::-webkit-scrollbar-track,
+.favorite-dropdown-cyan .ant-dropdown-menu::-webkit-scrollbar-track,
+.favorite-dropdown-red .ant-dropdown-menu::-webkit-scrollbar-track,
+.favorite-dropdown-gold .ant-dropdown-menu::-webkit-scrollbar-track,
+.fullscreen-dropdown .ant-dropdown-menu::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.favorite-dropdown-light .ant-dropdown-menu::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2) !important;
+  border-radius: 3px !important;
+}
+
+.favorite-dropdown-dark .ant-dropdown-menu::-webkit-scrollbar-thumb,
+.favorite-dropdown-blue .ant-dropdown-menu::-webkit-scrollbar-thumb,
+.favorite-dropdown-purple .ant-dropdown-menu::-webkit-scrollbar-thumb,
+.favorite-dropdown-green .ant-dropdown-menu::-webkit-scrollbar-thumb,
+.favorite-dropdown-orange .ant-dropdown-menu::-webkit-scrollbar-thumb,
+.favorite-dropdown-cyan .ant-dropdown-menu::-webkit-scrollbar-thumb,
+.favorite-dropdown-red .ant-dropdown-menu::-webkit-scrollbar-thumb,
+.favorite-dropdown-gold .ant-dropdown-menu::-webkit-scrollbar-thumb,
+.fullscreen-dropdown .ant-dropdown-menu::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3) !important;
+  border-radius: 3px !important;
+}
+
+/* 通用菜单项样式 - 适用于所有主题 */
+.favorite-dropdown-light .ant-dropdown-menu-item,
+.favorite-dropdown-dark .ant-dropdown-menu-item,
+.favorite-dropdown-blue .ant-dropdown-menu-item,
+.favorite-dropdown-purple .ant-dropdown-menu-item,
+.favorite-dropdown-green .ant-dropdown-menu-item,
+.favorite-dropdown-orange .ant-dropdown-menu-item,
+.favorite-dropdown-cyan .ant-dropdown-menu-item,
+.favorite-dropdown-red .ant-dropdown-menu-item,
+.favorite-dropdown-gold .ant-dropdown-menu-item,
+.fullscreen-dropdown .ant-dropdown-menu-item {
+  padding: 8px 12px !important;
+  line-height: 1.4 !important;
+}
+
+/* 浅色主题 */
+.favorite-dropdown-light .ant-dropdown-menu {
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+.favorite-dropdown-light .ant-dropdown-menu-item {
+  color: rgba(0,0,0,0.85) !important;
+}
+
+.favorite-dropdown-light .ant-dropdown-menu-item:hover {
+  background: rgba(0,0,0,0.04) !important;
+}
+
+.favorite-dropdown-light .ant-dropdown-menu-item-divider {
+  background: rgba(0,0,0,0.06) !important;
+}
+
+/* 深色主题 */
+.favorite-dropdown-dark .ant-dropdown-menu {
+  background: rgba(0,0,0,0.85) !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+}
+
+.favorite-dropdown-dark .ant-dropdown-menu-item {
+  color: rgba(255,255,255,0.85) !important;
+}
+
+.favorite-dropdown-dark .ant-dropdown-menu-item:hover {
+  background: rgba(255,255,255,0.1) !important;
+}
+
+.favorite-dropdown-dark .ant-dropdown-menu-item-divider {
+  background: rgba(255,255,255,0.12) !important;
+}
+
+/* 蓝色主题 */
+.favorite-dropdown-blue .ant-dropdown-menu {
+  background: rgba(13, 26, 38, 0.9) !important;
+  border: 1px solid rgba(64, 169, 255, 0.3) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important;
+}
+
+.favorite-dropdown-blue .ant-dropdown-menu-item {
+  color: rgba(255,255,255,0.85) !important;
+}
+
+.favorite-dropdown-blue .ant-dropdown-menu-item:hover {
+  background: rgba(64, 169, 255, 0.15) !important;
+}
+
+.favorite-dropdown-blue .ant-dropdown-menu-item-divider {
+  background: rgba(64, 169, 255, 0.2) !important;
+}
+
+/* 紫色主题 */
+.favorite-dropdown-purple .ant-dropdown-menu {
+  background: rgba(22, 8, 43, 0.9) !important;
+  border: 1px solid rgba(114, 46, 209, 0.3) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important;
+}
+
+.favorite-dropdown-purple .ant-dropdown-menu-item {
+  color: rgba(255,255,255,0.85) !important;
+}
+
+.favorite-dropdown-purple .ant-dropdown-menu-item:hover {
+  background: rgba(114, 46, 209, 0.15) !important;
+}
+
+.favorite-dropdown-purple .ant-dropdown-menu-item-divider {
+  background: rgba(114, 46, 209, 0.2) !important;
+}
+
+/* 绿色主题 */
+.favorite-dropdown-green .ant-dropdown-menu {
+  background: rgba(6, 20, 6, 0.9) !important;
+  border: 1px solid rgba(82, 196, 26, 0.3) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important;
+}
+
+.favorite-dropdown-green .ant-dropdown-menu-item {
+  color: rgba(255,255,255,0.85) !important;
+}
+
+.favorite-dropdown-green .ant-dropdown-menu-item:hover {
+  background: rgba(82, 196, 26, 0.15) !important;
+}
+
+.favorite-dropdown-green .ant-dropdown-menu-item-divider {
+  background: rgba(82, 196, 26, 0.2) !important;
+}
+
+/* 橙色主题 */
+.favorite-dropdown-orange .ant-dropdown-menu {
+  background: rgba(25, 15, 0, 0.9) !important;
+  border: 1px solid rgba(255, 140, 0, 0.3) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important;
+}
+
+.favorite-dropdown-orange .ant-dropdown-menu-item {
+  color: rgba(255,255,255,0.85) !important;
+}
+
+.favorite-dropdown-orange .ant-dropdown-menu-item:hover {
+  background: rgba(255, 140, 0, 0.15) !important;
+}
+
+.favorite-dropdown-orange .ant-dropdown-menu-item-divider {
+  background: rgba(255, 140, 0, 0.2) !important;
+}
+
+/* 青色主题 */
+.favorite-dropdown-cyan .ant-dropdown-menu {
+  background: rgba(0, 20, 20, 0.9) !important;
+  border: 1px solid rgba(19, 194, 194, 0.3) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important;
+}
+
+.favorite-dropdown-cyan .ant-dropdown-menu-item {
+  color: rgba(255,255,255,0.85) !important;
+}
+
+.favorite-dropdown-cyan .ant-dropdown-menu-item:hover {
+  background: rgba(19, 194, 194, 0.15) !important;
+}
+
+.favorite-dropdown-cyan .ant-dropdown-menu-item-divider {
+  background: rgba(19, 194, 194, 0.2) !important;
+}
+
+/* 红色主题 */
+.favorite-dropdown-red .ant-dropdown-menu {
+  background: rgba(25, 6, 6, 0.9) !important;
+  border: 1px solid rgba(245, 34, 45, 0.3) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important;
+}
+
+.favorite-dropdown-red .ant-dropdown-menu-item {
+  color: rgba(255,255,255,0.85) !important;
+}
+
+.favorite-dropdown-red .ant-dropdown-menu-item:hover {
+  background: rgba(245, 34, 45, 0.15) !important;
+}
+
+.favorite-dropdown-red .ant-dropdown-menu-item-divider {
+  background: rgba(245, 34, 45, 0.2) !important;
+}
+
+/* 金色主题 */
+.favorite-dropdown-gold .ant-dropdown-menu {
+  background: rgba(25, 20, 0, 0.9) !important;
+  border: 1px solid rgba(250, 173, 20, 0.3) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important;
+}
+
+.favorite-dropdown-gold .ant-dropdown-menu-item {
+  color: rgba(255,255,255,0.85) !important;
+}
+
+.favorite-dropdown-gold .ant-dropdown-menu-item:hover {
+  background: rgba(250, 173, 20, 0.15) !important;
+}
+
+.favorite-dropdown-gold .ant-dropdown-menu-item-divider {
+  background: rgba(250, 173, 20, 0.2) !important;
+}

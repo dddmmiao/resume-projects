@@ -1,0 +1,111 @@
+/* 信息条样式 - 与canvas完全融合的一体化设计 */
+.chart-info-bar {
+  font-size: 12px !important;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif !important;
+  display: flex !important;
+  gap: 16px !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+  overflow-x: auto !important;
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE/Edge */
+  /* 继承外层容器的圆角设置，实现完全融合 */
+  border-radius: inherit !important;
+}
+
+.chart-info-bar::-webkit-scrollbar {
+  display: none !important; /* Chrome/Safari */
+}
+
+.chart-info-bar * {
+  line-height: 1.5 !important;
+  flex-shrink: 0 !important;
+}
+
+.chart-info-bar > span {
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  min-width: fit-content !important;
+}
+
+.chart-info-bar .info-label {
+  font-weight: 500 !important;
+  opacity: 0.8 !important;
+}
+
+.chart-info-bar .info-value-red,
+.chart-info-bar .info-value-green,
+.chart-info-bar .info-value-neutral {
+  font-weight: 600 !important;
+  font-family: 'SF Mono', 'Monaco', 'Cascadia Code', monospace !important;
+}
+
+/* Light主题文字颜色强制设置 */
+.chart-info-bar-light .info-label {
+  color: rgba(0, 0, 0, 0.65) !important;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.65) !important;
+}
+
+.chart-info-bar-light .info-value-red {
+  color: #ff4757 !important;
+  -webkit-text-fill-color: #ff4757 !important;
+}
+
+.chart-info-bar-light .info-value-green {
+  color: #2ed573 !important;
+  -webkit-text-fill-color: #2ed573 !important;
+}
+
+.chart-info-bar-light .info-value-neutral {
+  color: rgba(0, 0, 0, 0.85) !important;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+/* Dark主题文字颜色强制设置 */
+.chart-info-bar-dark .info-label {
+  color: rgba(255, 255, 255, 0.75) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.chart-info-bar-dark .info-value-red {
+  color: #ff6b7d !important;
+  -webkit-text-fill-color: #ff6b7d !important;
+}
+
+.chart-info-bar-dark .info-value-green {
+  color: #51cf66 !important;
+  -webkit-text-fill-color: #51cf66 !important;
+}
+
+.chart-info-bar-dark .info-value-neutral {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* 移动端响应式优化 */
+@media (max-width: 768px) {
+  .chart-info-bar {
+    font-size: 11px !important;
+    gap: 12px !important;
+    padding: 6px 10px !important;
+  }
+  
+  .chart-info-bar > span {
+    gap: 3px !important;
+  }
+}
+
+/* 隐藏工具栏滚动条，但保持滚动功能 */
+.drawing-toolbar-scroll-container {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE/Edge */
+}
+
+.drawing-toolbar-scroll-container::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari, Opera */
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}

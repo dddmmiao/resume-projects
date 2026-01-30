@@ -1,0 +1,456 @@
+/* 移动端简化样式 - 专为手机优化 */
+
+/* 移动端基础样式 */
+@media (max-width: 768px) {
+  /* 隐藏桌面端组件 */
+  .desktop-only {
+    display: none !important;
+  }
+
+  /* 移动端专用样式 */
+  .mobile-dashboard {
+    min-height: 100vh;
+    background: var(--theme-bg, #001529);
+    color: var(--theme-text, rgba(255,255,255,0.9));
+  }
+
+  /* 移动端卡片 */
+  .mobile-stock-card {
+    background: var(--theme-card, rgba(255,255,255,0.05));
+    border: 1px solid var(--theme-border, rgba(255,255,255,0.1));
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .mobile-stock-card:active {
+    transform: scale(0.98);
+    background: var(--theme-card-hover, rgba(255,255,255,0.08));
+  }
+
+  /* 移动端按钮 */
+  .mobile-btn {
+    height: 44px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  .mobile-btn:active {
+    transform: scale(0.95);
+  }
+
+  /* 移动端输入框 */
+  .mobile-input {
+    height: 44px;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  /* 移动端标签页 */
+  .mobile-tabs .ant-tabs-tab {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  /* 移动端分页 */
+  .mobile-pagination {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--theme-bg, #001529);
+    border-top: 1px solid var(--theme-border, rgba(255,255,255,0.1));
+    padding: 12px 16px;
+    z-index: 1000;
+  }
+
+  /* 移动端抽屉 */
+  .mobile-drawer .ant-drawer-content,
+  .mobile-drawer-dark .ant-drawer-content,
+  .mobile-drawer-light .ant-drawer-content {
+    background: var(--theme-bg, #001529);
+    border-top-left-radius: 16px !important;
+    border-top-right-radius: 16px !important;
+  }
+
+  .mobile-drawer .ant-drawer-header,
+  .mobile-drawer-dark .ant-drawer-header,
+  .mobile-drawer-light .ant-drawer-header {
+    background: var(--theme-bg, #001529);
+    border-bottom: 1px solid var(--theme-border, rgba(255,255,255,0.1));
+    border-top-left-radius: 16px !important;
+    border-top-right-radius: 16px !important;
+  }
+
+  .mobile-drawer .ant-drawer-title {
+    color: var(--theme-text, rgba(255,255,255,0.9));
+  }
+
+  /* 确保所有移动端抽屉都有圆角 */
+  .ant-drawer-bottom .ant-drawer-content {
+    border-top-left-radius: 16px !important;
+    border-top-right-radius: 16px !important;
+  }
+
+  /* 详情页全屏Drawer不需要圆角 */
+  .mobile-detail-fullscreen .ant-drawer-content,
+  .mobile-detail-fullscreen .ant-drawer-content-wrapper,
+  .mobile-detail-fullscreen .ant-drawer-header {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+
+  /* 确保详情全屏Drawer及内部元素始终可点击，避免被其他全局样式意外禁用 */
+  .mobile-detail-fullscreen,
+  .mobile-detail-fullscreen *:not(canvas) {
+    pointer-events: auto !important;
+  }
+
+  /* 修复深色主题下 Drawer 圆角处露出白色背景的问题 */
+  .ant-drawer-content-wrapper {
+    background: transparent !important;
+  }
+
+  .ant-drawer-content {
+    background: transparent !important;
+  }
+
+  /* 深色主题 Drawer 的文字颜色 */
+  .mobile-drawer-dark .ant-drawer-body .ant-list-item .ant-typography,
+  .mobile-drawer-dark .ant-drawer-body .ant-list-item .ant-typography span {
+    color: #ffffff !important;
+  }
+
+  /* 选中项：蓝色背景上的白色文字 */
+  .mobile-drawer-dark .ant-drawer-body .ant-list-item[style*="background: rgb(24, 144, 255)"] .ant-typography,
+  .mobile-drawer-dark .ant-drawer-body .ant-list-item[style*="background:#1890ff"] .ant-typography,
+  .mobile-drawer-dark .ant-drawer-body .ant-list-item[style*="background: #1890ff"] .ant-typography {
+    color: #ffffff !important;
+  }
+
+  /* 深色主题 Drawer 关闭按钮颜色 - 通用规则（移动端） */
+  .ant-drawer-close,
+  .ant-drawer-close svg,
+  .ant-drawer-close .anticon,
+  .ant-drawer-close .anticon svg,
+  .ant-drawer-header .ant-drawer-close,
+  .ant-drawer-header .ant-drawer-close svg,
+  .ant-drawer-header .ant-drawer-close .anticon,
+  .ant-drawer-header .ant-drawer-close .anticon svg {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+  }
+
+  .ant-drawer-close:hover,
+  .ant-drawer-close:hover svg,
+  .ant-drawer-close:hover .anticon,
+  .ant-drawer-close:hover .anticon svg,
+  .ant-drawer-header .ant-drawer-close:hover,
+  .ant-drawer-header .ant-drawer-close:hover svg,
+  .ant-drawer-header .ant-drawer-close:hover .anticon,
+  .ant-drawer-header .ant-drawer-close:hover .anticon svg {
+    color: rgba(255, 255, 255, 0.9) !important;
+    fill: rgba(255, 255, 255, 0.9) !important;
+    stroke: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  /* 深色主题 Drawer 关闭按钮颜色 - 特定类名（更高优先级） */
+  .mobile-drawer-dark .ant-drawer-close,
+  .mobile-drawer-dark .ant-drawer-close svg,
+  .mobile-drawer-dark .ant-drawer-close .anticon,
+  .mobile-drawer-dark .ant-drawer-close .anticon svg,
+  .mobile-drawer-dark .ant-drawer-header .ant-drawer-close,
+  .mobile-drawer-dark .ant-drawer-header .ant-drawer-close svg,
+  .mobile-drawer-dark .ant-drawer-header .ant-drawer-close .anticon,
+  .mobile-drawer-dark .ant-drawer-header .ant-drawer-close .anticon svg {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+  }
+
+  .mobile-drawer-dark .ant-drawer-close:hover,
+  .mobile-drawer-dark .ant-drawer-close:hover svg,
+  .mobile-drawer-dark .ant-drawer-close:hover .anticon,
+  .mobile-drawer-dark .ant-drawer-close:hover .anticon svg,
+  .mobile-drawer-dark .ant-drawer-header .ant-drawer-close:hover,
+  .mobile-drawer-dark .ant-drawer-header .ant-drawer-close:hover svg,
+  .mobile-drawer-dark .ant-drawer-header .ant-drawer-close:hover .anticon,
+  .mobile-drawer-dark .ant-drawer-header .ant-drawer-close:hover .anticon svg {
+    color: rgba(255, 255, 255, 0.9) !important;
+    fill: rgba(255, 255, 255, 0.9) !important;
+    stroke: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  /* 浅色主题 Drawer 关闭按钮颜色 */
+  .mobile-drawer-light .ant-drawer-close,
+  .mobile-drawer-light .ant-drawer-close svg,
+  .mobile-drawer-light .ant-drawer-close .anticon,
+  .mobile-drawer-light .ant-drawer-close .anticon svg,
+  .mobile-drawer-light .ant-drawer-header .ant-drawer-close,
+  .mobile-drawer-light .ant-drawer-header .ant-drawer-close svg,
+  .mobile-drawer-light .ant-drawer-header .ant-drawer-close .anticon,
+  .mobile-drawer-light .ant-drawer-header .ant-drawer-close .anticon svg {
+    color: rgba(0, 0, 0, 0.85) !important;
+    fill: rgba(0, 0, 0, 0.85) !important;
+    stroke: rgba(0, 0, 0, 0.85) !important;
+  }
+
+  /* 统一处理所有移动端关闭按钮：点击时无阴影 */
+  .ant-drawer-close,
+  .ant-drawer-close:active,
+  .ant-drawer-close:focus,
+  .ant-drawer-close:focus-visible,
+  .ant-drawer-close:hover,
+  .ant-modal-close,
+  .ant-modal-close:active,
+  .ant-modal-close:focus,
+  .ant-modal-close:focus-visible,
+  .ant-modal-close:hover,
+  .mobile-close-button,
+  .mobile-close-button:active,
+  .mobile-close-button:focus,
+  .mobile-close-button:focus-visible,
+  .mobile-close-button:hover,
+  .detail-close-button,
+  .detail-close-button:active,
+  .detail-close-button:focus,
+  .detail-close-button:focus-visible,
+  .detail-close-button:hover {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    text-shadow: none !important;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  /* 移动端安全区域 */
+  .mobile-safe-area {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  /* 移动端滚动优化 */
+  .mobile-scroll {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* 隐藏滚动条但保持滚动功能 */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* 移动端触摸优化 */
+  .mobile-touchable {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* 移动端加载动画 */
+  .mobile-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    color: var(--theme-text, rgba(255,255,255,0.7));
+  }
+
+  .mobile-loading-spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid var(--theme-border, rgba(255,255,255,0.2));
+    border-top: 3px solid #1890ff;
+    border-radius: 50%;
+    animation: mobile-spin 1s linear infinite;
+    margin-bottom: 16px;
+  }
+
+  @keyframes mobile-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* 移动端空状态 */
+  .mobile-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    color: var(--theme-text, rgba(255,255,255,0.6));
+    text-align: center;
+  }
+
+  .mobile-empty-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+  }
+}
+
+/* 移动端工具栏行样式 - 隐藏滚动条但保持滚动功能 */
+.mobile-toolbar-row {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE/Edge */
+}
+
+.mobile-toolbar-row::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari, Opera */
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}
+
+/* 平板端适配 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .mobile-only {
+    display: none !important;
+  }
+  
+  .desktop-only {
+    display: block !important;
+  }
+}
+
+/* 桌面端保持原样 */
+@media (min-width: 1025px) {
+  .mobile-only {
+    display: none !important;
+  }
+  
+  .desktop-only {
+    display: block !important;
+  }
+}
+
+/* 移动端全局禁用所有过渡动画 - 强制立即响应 */
+@media (max-width: 768px) {
+  /* 全局禁用所有transition和animation */
+  *,
+  *::before,
+  *::after,
+  *:hover,
+  *:active,
+  *:focus,
+  *:focus-visible {
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    animation: none !important;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    transition-property: none !important;
+    -webkit-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -o-transition-property: none !important;
+  }
+  
+  /* 特别针对所有可能变化的属性 */
+  body,
+  html,
+  #root,
+  div,
+  span,
+  button,
+  a,
+  input,
+  select,
+  textarea,
+  .ant-layout,
+  .ant-layout-content,
+  .ant-layout-header,
+  .ant-drawer,
+  .ant-drawer-content,
+  .ant-drawer-body,
+  .ant-drawer-header,
+  .ant-drawer-wrapper-body,
+  .ant-drawer-mask,
+  .ant-modal,
+  .ant-modal-content,
+  .ant-modal-body,
+  .ant-card,
+  .ant-card-body {
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition-property: none !important;
+    -webkit-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -o-transition-property: none !important;
+  }
+  
+  /* 禁用所有颜色和背景色过渡 */
+  [style*="background"],
+  [style*="color"],
+  [style*="border"] {
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+  }
+
+  /* 保证 Ant Modal 在禁用动画后仍然可见 */
+  .ant-modal,
+  .ant-modal-mask {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* 主题切换时禁用所有过渡动画，实现瞬间切换 */
+html.theme-changing,
+html.theme-changing *,
+html.theme-changing *::before,
+html.theme-changing *::after {
+  transition: none !important;
+  animation: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+}
+
+/* 禁用Segmented组件的动画，确保立即响应 */
+.ant-segmented,
+.ant-segmented *,
+.ant-segmented-item,
+.ant-segmented-item-selected,
+.ant-segmented-item-label {
+  transition: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+}
+
+/* 设置Drawer内的所有按钮立即响应，无动画 */
+.ant-drawer-body button {
+  transition: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+}
+
+/* 设置Drawer内的按钮点击效果 */
+.ant-drawer-body button:active {
+  opacity: 0.8;
+  transform: scale(0.98);
+}

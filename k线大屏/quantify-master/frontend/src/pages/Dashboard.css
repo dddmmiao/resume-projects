@@ -1,0 +1,2804 @@
+/* Dashboard 页面样式文件 */
+
+
+.stock-grid {
+  /* 卡片布局常量 */
+  --card-width: 340px;
+  --card-height: 380px;
+  --card-gap: 16px;
+
+  display: grid;
+  /* 响应式网格布局 */
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-width), 1fr));
+  gap: var(--card-gap);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+/* 紧凑模式网格布局 - 只显示卡片头部，宽度与正常布局一致 */
+.stock-grid.compact-mode {
+  --card-height: auto;
+  --card-gap: 8px;
+  /* 使用与正常布局相同的卡片宽度 340px */
+}
+
+.stock-grid.compact-mode .ant-card {
+  height: auto !important;
+  min-height: unset !important;
+}
+
+.stock-grid.compact-mode .ant-card .ant-card-body {
+  padding: 8px !important;
+  height: auto !important;
+}
+
+.stock-grid.compact-mode .stock-card-content {
+  height: auto !important;
+}
+
+/* 移动端网格样式 */
+.mobile-stock-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+/* 平板端网格调整 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .stock-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 12px;
+  }
+}
+
+/* 移动端网格调整 */
+@media (max-width: 768px) {
+  .stock-grid {
+    display: none;
+  }
+  
+  .mobile-stock-grid {
+    display: flex;
+  }
+}
+
+/* 优化卡片样式 - 专业金融界面风格 */
+.stock-grid .ant-card {
+  height: var(--card-height) !important;
+  border-radius: 12px !important;
+  transition: all 0.3s ease;
+  position: relative !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: none !important;
+}
+
+/* 卡片头部字体规范 - 固定尺寸，保证一致性 */
+.stock-grid .stock-header {
+  font-size: 12px !important;
+}
+
+.stock-grid .stock-header .ant-typography {
+  font-size: 16px !important;
+}
+
+.stock-grid .stock-header .stock-price {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.stock-grid .stock-header .stock-change {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+/* 卡片悬停效果 - 所有主题统一无阴影，仅边框变化 */
+.stock-grid .ant-card:hover {
+  box-shadow: none !important;
+  border-color: rgba(24, 144, 255, 0.3) !important;
+  transition: border-color 0.2s ease !important;
+}
+
+/* 各主题卡片悬停效果 - 边框颜色适配 */
+.dashboard-theme.light .stock-grid .ant-card:hover {
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.dashboard-theme.dark .stock-grid .ant-card:hover {
+  border-color: rgba(24, 144, 255, 0.4) !important;
+}
+
+.dashboard-theme.blue .stock-grid .ant-card:hover {
+  border-color: rgba(23, 125, 220, 0.5) !important;
+}
+
+.dashboard-theme.purple .stock-grid .ant-card:hover {
+  border-color: rgba(114, 46, 209, 0.5) !important;
+}
+
+.dashboard-theme.green .stock-grid .ant-card:hover {
+  border-color: rgba(54, 179, 126, 0.5) !important;
+}
+
+.dashboard-theme.orange .stock-grid .ant-card:hover {
+  border-color: rgba(250, 140, 22, 0.5) !important;
+}
+
+.dashboard-theme.cyan .stock-grid .ant-card:hover {
+  border-color: rgba(0, 170, 170, 0.5) !important;
+}
+
+.dashboard-theme.red .stock-grid .ant-card:hover {
+  border-color: rgba(245, 34, 45, 0.5) !important;
+}
+
+.dashboard-theme.gold .stock-grid .ant-card:hover {
+  border-color: rgba(212, 175, 55, 0.5) !important;
+}
+
+/* 自选按钮容器 - 优化性能 */
+.favorite-button-container {
+  will-change: visibility;
+}
+
+.stock-grid .ant-card .ant-card-body {
+  padding: 12px !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  position: relative !important;
+  background: transparent !important;
+}
+
+/* 卡片内容容器：flex布局，稳定结构 */
+.stock-grid .stock-card-content {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* 全屏状态：保持一致的布局结构 */
+.fullscreen-card .stock-card-content {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* 让卡片内 Select 的下拉根据内容自适应宽度，避免省略号 */
+.dashboard-theme.green .dashboard-pagination .ant-pagination-item { background: rgba(54,179,126,0.18) !important; border-color: rgba(54,179,126,0.28) !important; }
+.dashboard-theme.green .dashboard-pagination .ant-pagination-item-active { background: #36b37e !important; border-color: #36b37e !important; }
+.dashboard-theme.green .dashboard-pagination .ant-pagination-item-active a,
+.dashboard-theme.green .dashboard-pagination .ant-pagination-item-active span { color: #fff !important; }
+.dashboard-theme.green .dashboard-pagination .ant-pagination-prev .ant-pagination-item-link,
+.dashboard-theme.green .dashboard-pagination .ant-pagination-next .ant-pagination-item-link { color: rgba(255,255,255,0.9) !important; border-color: rgba(54,179,126,0.28) !important; background: rgba(54,179,126,0.18) !important; }
+.dashboard-theme.green .dashboard-pagination .ant-pagination-item-container { background: rgba(54,179,126,0.18) !important; border-color: rgba(54,179,126,0.28) !important; }
+.dashboard-theme.green .dashboard-pagination .ant-pagination-item-container .anticon { color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.orange .dashboard-pagination .ant-pagination-item a,
+.dashboard-theme.orange .dashboard-pagination .ant-pagination-item span { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.orange .dashboard-pagination .ant-pagination-item { background: rgba(250,140,22,0.20) !important; border-color: rgba(250,140,22,0.30) !important; }
+.dashboard-theme.orange .dashboard-pagination .ant-pagination-item-active { background: #fa8c16 !important; border-color: #fa8c16 !important; }
+.dashboard-theme.orange .dashboard-pagination .ant-pagination-item-active a,
+.dashboard-theme.orange .dashboard-pagination .ant-pagination-item-active span { color: #fff !important; }
+.dashboard-theme.orange .dashboard-pagination .ant-pagination-prev .ant-pagination-item-link,
+.dashboard-theme.orange .dashboard-pagination .ant-pagination-next .ant-pagination-item-link { color: rgba(255,255,255,0.9) !important; border-color: rgba(250,140,22,0.30) !important; background: rgba(250,140,22,0.20) !important; }
+.dashboard-theme.orange .dashboard-pagination .ant-pagination-item-container { background: rgba(250,140,22,0.20) !important; border-color: rgba(250,140,22,0.30) !important; }
+.dashboard-theme.orange .dashboard-pagination .ant-pagination-item-container .anticon { color: rgba(255,255,255,0.9) !important; }
+
+/* 新增主题：cyan、red、gold 的分页样式 - 使用更强的选择器确保文字颜色生效 */
+.dashboard-theme.cyan .dashboard-pagination .ant-pagination-item a,
+.dashboard-theme.cyan .dashboard-pagination .ant-pagination-item span { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.cyan .dashboard-pagination .ant-pagination-item { background: rgba(0,170,170,0.18) !important; border-color: rgba(0,170,170,0.28) !important; }
+.dashboard-theme.cyan .dashboard-pagination .ant-pagination-item-active { background: #00aaaa !important; border-color: #00aaaa !important; }
+.dashboard-theme.cyan .dashboard-pagination .ant-pagination-item-active a,
+.dashboard-theme.cyan .dashboard-pagination .ant-pagination-item-active span { color: #fff !important; }
+.dashboard-theme.cyan .dashboard-pagination .ant-pagination-prev .ant-pagination-item-link,
+.dashboard-theme.cyan .dashboard-pagination .ant-pagination-next .ant-pagination-item-link { color: rgba(255,255,255,0.9) !important; border-color: rgba(0,170,170,0.28) !important; background: rgba(0,170,170,0.18) !important; }
+.dashboard-theme.cyan .dashboard-pagination .ant-pagination-item-container { background: rgba(0,170,170,0.18) !important; border-color: rgba(0,170,170,0.28) !important; }
+.dashboard-theme.cyan .dashboard-pagination .ant-pagination-item-container .anticon { color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.red .dashboard-pagination .ant-pagination-item a,
+.dashboard-theme.red .dashboard-pagination .ant-pagination-item span { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.red .dashboard-pagination .ant-pagination-item { background: rgba(220,38,38,0.18) !important; border-color: rgba(220,38,38,0.28) !important; }
+.dashboard-theme.red .dashboard-pagination .ant-pagination-item-active { background: #dc2626 !important; border-color: #dc2626 !important; }
+.dashboard-theme.red .dashboard-pagination .ant-pagination-item-active a,
+.dashboard-theme.red .dashboard-pagination .ant-pagination-item-active span { color: #fff !important; }
+.dashboard-theme.red .dashboard-pagination .ant-pagination-prev .ant-pagination-item-link,
+.dashboard-theme.red .dashboard-pagination .ant-pagination-next .ant-pagination-item-link { color: rgba(255,255,255,0.9) !important; border-color: rgba(220,38,38,0.28) !important; background: rgba(220,38,38,0.18) !important; }
+.dashboard-theme.red .dashboard-pagination .ant-pagination-item-container { background: rgba(220,38,38,0.18) !important; border-color: rgba(220,38,38,0.28) !important; }
+.dashboard-theme.red .dashboard-pagination .ant-pagination-item-container .anticon { color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.gold .dashboard-pagination .ant-pagination-item a,
+.dashboard-theme.gold .dashboard-pagination .ant-pagination-item span { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.gold .dashboard-pagination .ant-pagination-item { background: rgba(250,173,20,0.18) !important; border-color: rgba(250,173,20,0.28) !important; }
+.dashboard-theme.gold .dashboard-pagination .ant-pagination-item-active { background: #faad14 !important; border-color: #faad14 !important; }
+.dashboard-theme.gold .dashboard-pagination .ant-pagination-item-active a,
+.dashboard-theme.gold .dashboard-pagination .ant-pagination-item-active span { color: #fff !important; }
+.dashboard-theme.gold .dashboard-pagination .ant-pagination-prev .ant-pagination-item-link,
+.dashboard-theme.gold .dashboard-pagination .ant-pagination-next .ant-pagination-item-link { color: rgba(255,255,255,0.9) !important; border-color: rgba(250,173,20,0.28) !important; background: rgba(250,173,20,0.18) !important; }
+.dashboard-theme.gold .dashboard-pagination .ant-pagination-item-container { background: rgba(250,173,20,0.18) !important; border-color: rgba(250,173,20,0.28) !important; }
+.dashboard-theme.gold .dashboard-pagination .ant-pagination-item-container .anticon { color: rgba(255,255,255,0.9) !important; }
+
+/* 每页下拉选择器主题样式 - 与分页按钮文字颜色保持一致 */
+.dashboard-theme.dark .page-size-selector .ant-select-selector { background: rgba(255,255,255,0.08) !important; border-color: rgba(255,255,255,0.15) !important; color: rgba(255,255,255,0.85) !important; }
+.dashboard-theme.dark .page-size-selector .ant-select-selection-item { color: rgba(255,255,255,0.85) !important; }
+.dashboard-theme.dark .page-size-selector .ant-select-arrow { color: rgba(255,255,255,0.85) !important; }
+
+.dashboard-theme.light .page-size-selector .ant-select-selector { background: rgba(0,0,0,0.03) !important; border-color: rgba(0,0,0,0.08) !important; color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .page-size-selector .ant-select-selection-item { color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .page-size-selector .ant-select-arrow { color: rgba(0,0,0,0.85) !important; }
+
+.dashboard-theme.blue .page-size-selector .ant-select-selector { background: rgba(23, 125, 220, 0.15) !important; border-color: rgba(23, 125, 220, 0.25) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.blue .page-size-selector .ant-select-selection-item { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.blue .page-size-selector .ant-select-arrow { color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.purple .page-size-selector .ant-select-selector { background: rgba(114, 46, 209, 0.18) !important; border-color: rgba(114, 46, 209, 0.28) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.purple .page-size-selector .ant-select-selection-item { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.purple .page-size-selector .ant-select-arrow { color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.green .page-size-selector .ant-select-selector { background: rgba(54,179,126,0.18) !important; border-color: rgba(54,179,126,0.28) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.green .page-size-selector .ant-select-selection-item { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.green .page-size-selector .ant-select-arrow { color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.orange .page-size-selector .ant-select-selector { background: rgba(250,140,22,0.20) !important; border-color: rgba(250,140,22,0.30) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.orange .page-size-selector .ant-select-selection-item { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.orange .page-size-selector .ant-select-arrow { color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.cyan .page-size-selector .ant-select-selector { background: rgba(0,170,170,0.18) !important; border-color: rgba(0,170,170,0.28) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.cyan .page-size-selector .ant-select-selection-item { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.cyan .page-size-selector .ant-select-arrow { color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.red .page-size-selector .ant-select-selector { background: rgba(220,38,38,0.18) !important; border-color: rgba(220,38,38,0.28) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.red .page-size-selector .ant-select-selection-item { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.red .page-size-selector .ant-select-arrow { color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.gold .page-size-selector .ant-select-selector { background: rgba(250,173,20,0.18) !important; border-color: rgba(250,173,20,0.28) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.gold .page-size-selector .ant-select-selection-item { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.gold .page-size-selector .ant-select-arrow { color: rgba(255,255,255,0.9) !important; }
+
+/* 默认主题（无主题类）- 所有下拉选择器样式 */
+.ant-select-selector { background: #ffffff !important; border-color: #d9d9d9 !important; color: #000000 !important; }
+.ant-select-selection-item { color: #000000 !important; }
+.ant-select-arrow { color: #000000 !important; }
+.ant-select-selection-placeholder { color: rgba(0,0,0,0.45) !important; }
+
+/* 白色主题 - 所有下拉选择器样式 */
+.dashboard-theme.light .ant-select-selector { background: #ffffff !important; border-color: #d9d9d9 !important; color: #000000 !important; }
+.dashboard-theme.light .ant-select-selection-item { color: #000000 !important; }
+.dashboard-theme.light .ant-select-arrow { color: #000000 !important; }
+.dashboard-theme.light .ant-select-selection-placeholder { color: rgba(0,0,0,0.45) !important; }
+
+/* 排序下拉选择器主题样式 - 修复文字颜色 */
+.dashboard-theme.dark .sort-select-dropdown .ant-select-selection-item { color: #ffffff !important; }
+.dashboard-theme.dark .sort-select-dropdown .ant-select-arrow { color: #ffffff !important; }
+
+/* 默认主题（无主题类或其他情况）- 白色背景黑色文字 */
+.sort-select-dropdown .ant-select-selection-item { color: #000000 !important; }
+.sort-select-dropdown .ant-select-arrow { color: #000000 !important; }
+
+.dashboard-theme.light .sort-select-dropdown .ant-select-selection-item { color: #000000 !important; }
+.dashboard-theme.light .sort-select-dropdown .ant-select-arrow { color: #000000 !important; }
+
+.dashboard-theme.blue .sort-select-dropdown .ant-select-selection-item { color: #ffffff !important; }
+.dashboard-theme.blue .sort-select-dropdown .ant-select-arrow { color: #ffffff !important; }
+
+.dashboard-theme.purple .sort-select-dropdown .ant-select-selection-item { color: #ffffff !important; }
+.dashboard-theme.purple .sort-select-dropdown .ant-select-arrow { color: #ffffff !important; }
+
+.dashboard-theme.green .sort-select-dropdown .ant-select-selection-item { color: #ffffff !important; }
+.dashboard-theme.green .sort-select-dropdown .ant-select-arrow { color: #ffffff !important; }
+
+.dashboard-theme.orange .sort-select-dropdown .ant-select-selection-item { color: #ffffff !important; }
+.dashboard-theme.orange .sort-select-dropdown .ant-select-arrow { color: #ffffff !important; }
+
+.dashboard-theme.cyan .sort-select-dropdown .ant-select-selection-item { color: #ffffff !important; }
+.dashboard-theme.cyan .sort-select-dropdown .ant-select-arrow { color: #ffffff !important; }
+
+.dashboard-theme.red .sort-select-dropdown .ant-select-selection-item { color: #ffffff !important; }
+.dashboard-theme.red .sort-select-dropdown .ant-select-arrow { color: #ffffff !important; }
+
+.dashboard-theme.gold .sort-select-dropdown .ant-select-selection-item { color: #ffffff !important; }
+.dashboard-theme.gold .sort-select-dropdown .ant-select-arrow { color: #ffffff !important; }
+
+/* 让排序下拉与右侧按钮视觉分离 */
+.sort-select-dropdown .ant-select-selector {
+  border-top-right-radius: 6px !important;
+  border-bottom-right-radius: 6px !important;
+  /* 去除默认的focus/hover外发光，避免“双边框”观感 */
+  box-shadow: none !important;
+  outline: none !important;
+  background: transparent !important;
+}
+.sort-select-dropdown.ant-select-focused .ant-select-selector,
+.sort-select-dropdown.ant-select-open .ant-select-selector,
+.sort-select-dropdown:hover .ant-select-selector,
+.sort-select-dropdown .ant-select-selector:focus,
+.sort-select-dropdown .ant-select-selector:active {
+  box-shadow: none !important;
+  outline: none !important;
+  background: transparent !important;
+}
+
+/* 顶部工具栏：统一控件高度与对齐 */
+.dashboard-theme .toolbar-container .ant-input,
+.dashboard-theme .toolbar-container .ant-input-affix-wrapper,
+.dashboard-theme .toolbar-container .ant-select:not(.ant-select-multiple) .ant-select-selector,
+.dashboard-theme .toolbar-container .ant-btn {
+  height: 28px !important;
+  line-height: 28px !important;
+  border-radius: 6px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+.dashboard-theme .toolbar-container .ant-input {
+  padding: 0 8px !important;
+}
+.dashboard-theme .toolbar-container .ant-input-affix-wrapper,
+.dashboard-theme .toolbar-container .ant-input-affix-wrapper:focus,
+.dashboard-theme .toolbar-container .ant-input-affix-wrapper:focus-within {
+  box-shadow: none !important;
+  outline: none !important;
+}
+.dashboard-theme .toolbar-container .ant-select-single .ant-select-selector .ant-select-selection-item,
+.dashboard-theme .toolbar-container .ant-select-single .ant-select-selector .ant-select-selection-placeholder {
+  line-height: 28px !important;
+}
+.dashboard-theme .toolbar-container .ant-select .ant-select-selector { padding: 0 8px !important; }
+.dashboard-theme .toolbar-container .ant-select:not(.ant-select-multiple) .ant-select-selector {
+  box-shadow: none !important;
+  outline: none !important;
+}
+.dashboard-theme .toolbar-container .ant-select:not(.ant-select-multiple).ant-select-focused .ant-select-selector,
+.dashboard-theme .toolbar-container .ant-select:not(.ant-select-multiple) .ant-select-selector:focus,
+.dashboard-theme .toolbar-container .ant-select:not(.ant-select-multiple) .ant-select-selector:active,
+.dashboard-theme .toolbar-container .ant-select:not(.ant-select-multiple):hover .ant-select-selector,
+.dashboard-theme .toolbar-container .ant-select-open .ant-select-selector {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* 更高优先级再统一一次高度，确保完全一致 */
+.dashboard-theme .toolbar-container .ant-select .ant-select-selector {
+  height: 28px !important;
+  line-height: 28px !important;
+  background: transparent !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding-left: 8px !important;
+  padding-right: 28px !important; /* 给箭头留出空间 */
+  border-radius: 6px !important;
+}
+.dashboard-theme .toolbar-container .ant-select { background: transparent !important; }
+.dashboard-theme .toolbar-container .ant-select .ant-select-selection-placeholder { line-height: 28px !important; }
+.dashboard-theme .toolbar-container .ant-select .ant-select-selection-item { line-height: 28px !important; }
+.dashboard-theme .toolbar-container .ant-select .ant-select-selection-search-input { height: 28px !important; }
+.dashboard-theme .toolbar-container .ant-select .ant-select-selection-placeholder { display: inline-flex !important; align-items: center !important; }
+
+/* 按钮去除焦点样式，避免内发光 */
+.dashboard-theme .toolbar-container .ant-btn,
+.dashboard-theme .toolbar-container .ant-btn:focus,
+.dashboard-theme .toolbar-container .ant-btn:focus-visible,
+.dashboard-theme .toolbar-container .ant-btn:hover,
+.dashboard-theme .toolbar-container .ant-btn:active {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* 多选下拉（概念）统一高度与居中 */
+.dashboard-theme .toolbar-container .ant-select-multiple .ant-select-selector {
+  min-height: 28px !important;
+  height: 28px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  box-shadow: none !important;
+  outline: none !important;
+  position: relative !important;
+}
+.dashboard-theme .toolbar-container .ant-select-multiple .ant-select-selection-overflow {
+  align-items: center !important;
+}
+.dashboard-theme .toolbar-container .ant-select-multiple .ant-select-selection-item {
+  height: 20px !important;
+  line-height: 20px !important;
+}
+.dashboard-theme .toolbar-container .ant-select-multiple .ant-select-selection-placeholder {
+  position: absolute !important;
+  top: 50% !important;
+  left: 8px !important;
+  transform: translateY(calc(-50% - 1px)) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+  width: auto !important;
+  height: 28px !important;
+  pointer-events: none !important;
+  white-space: nowrap !important;
+  z-index: 0 !important;
+  line-height: 28px !important;
+}
+
+/* 工具栏多选：统一选择器定位与内部元素居中（适用于所有多选） */
+.dashboard-theme .toolbar-container .ant-select-multiple .ant-select-selector {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 28px !important;
+  line-height: 28px !important;
+  position: relative !important;
+}
+.dashboard-theme .toolbar-container .ant-select-multiple .ant-select-selection-wrap { position: static !important; }
+.dashboard-theme .toolbar-container .ant-select-multiple .ant-select-selection-wrap,
+.dashboard-theme .toolbar-container .ant-select-multiple .ant-select-selection-overflow,
+.dashboard-theme .toolbar-container .ant-select-multiple .ant-select-selection-overflow-item,
+.dashboard-theme .toolbar-container .ant-select-multiple .ant-select-selection-search {
+  display: inline-flex !important;
+  align-items: center !important;
+}
+/* 多选下拉内部溢出容器与搜索框相对选择器居中对齐（应用于工具栏所有多选） */
+.dashboard-theme .toolbar-container .ant-select-multiple .ant-select-selection-overflow {
+  position: absolute !important;
+  top: 50% !important;
+  left: 8px !important;
+  right: 28px !important; /* 预留箭头空间 */
+  transform: translateY(-50%) !important;
+  height: 28px !important;
+  line-height: 28px !important;
+  z-index: 1 !important;
+}
+.dashboard-theme .toolbar-container .ant-select-multiple .ant-select-selection-overflow-item { height: 20px !important; line-height: 20px !important; }
+.dashboard-theme .toolbar-container .ant-select-multiple .ant-select-selection-search { height: 28px !important; line-height: 28px !important; width: 100% !important; flex: 1 1 auto !important; }
+.dashboard-theme .toolbar-container .ant-select-multiple .ant-select-selection-search-input { height: 28px !important; line-height: 28px !important; }
+.dashboard-theme .toolbar-container .ant-select-multiple .ant-select-selection-placeholder {
+  position: absolute !important;
+  top: 50% !important;
+  left: 8px !important;
+  transform: translateY(-50%) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 28px !important;
+  line-height: 28px !important;
+  pointer-events: none !important;
+}
+.dashboard-theme .toolbar-container .ant-select-multiple.ant-select-focused .ant-select-selection-placeholder,
+.dashboard-theme .toolbar-container .ant-select-multiple.ant-select-open .ant-select-selection-placeholder {
+  opacity: 1 !important;
+}
+
+/* 单选下拉占位符垂直居中（兜底修正，避免不同行高导致轻微偏移） */
+.dashboard-theme .toolbar-container .ant-select-single .ant-select-selection-placeholder {
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 28px !important;
+  height: 28px !important;
+}
+.dashboard-theme .toolbar-container .ant-select-multiple .ant-select-selection-search {
+  height: 28px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  position: relative !important;
+  z-index: 1 !important;
+  flex: 1 1 auto !important;
+  min-width: 10px !important;
+  width: 100% !important;
+}
+.dashboard-theme .toolbar-container .ant-select-multiple .ant-select-selection-search-input {
+  height: 28px !important;
+  line-height: 28px !important;
+  padding: 0 0 0 0px !important;
+  margin: 0 !important;
+  color: inherit !important;
+  caret-color: currentColor !important;
+  width: 100% !important;
+  min-width: 1px !important;
+  background: transparent !important;
+  opacity: 1 !important;
+  border: none !important;
+}
+/* 主题下光标颜色与文本颜色保证可见性 */
+.dashboard-theme.light .toolbar-container .ant-select-multiple .ant-select-selection-search-input {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.dashboard-theme.dark .toolbar-container .ant-select-multiple .ant-select-selection-search-input,
+.dashboard-theme.blue .toolbar-container .ant-select-multiple .ant-select-selection-search-input,
+.dashboard-theme.purple .toolbar-container .ant-select-multiple .ant-select-selection-search-input,
+.dashboard-theme.green .toolbar-container .ant-select-multiple .ant-select-selection-search-input,
+.dashboard-theme.orange .toolbar-container .ant-select-multiple .ant-select-selection-search-input,
+.dashboard-theme.cyan .toolbar-container .ant-select-multiple .ant-select-selection-search-input,
+.dashboard-theme.red .toolbar-container .ant-select-multiple .ant-select-selection-search-input,
+.dashboard-theme.gold .toolbar-container .ant-select-multiple .ant-select-selection-search-input {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.dashboard-theme .toolbar-container .ant-select-multiple .ant-select-selection-overflow {
+  flex: 1 1 auto !important;
+}
+/* 聚焦时保留多选下拉的占位符可见 */
+.dashboard-theme .toolbar-container .ant-select-multiple.ant-select-focused .ant-select-selection-placeholder {
+  opacity: 1 !important;
+}
+.dashboard-theme .toolbar-container .ant-select-multiple.ant-select-open .ant-select-selection-placeholder {
+  opacity: 1 !important;
+}
+.dashboard-theme .toolbar-container .ant-select { vertical-align: middle !important; }
+.dashboard-theme .toolbar-container .ant-select .ant-select-arrow {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  right: 11px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 16px !important;
+  margin: 0 !important;
+}
+.sort-select-dropdown .ant-select-arrow {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  right: 11px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 16px !important;
+  margin: 0 !important;
+}
+.toolbar-panel {
+  gap: 8px !important;
+}
+/* 右上角操作区（主题切换/快捷键）统一分隔，所有主题生效；独立背景避免半透明连接 */
+.toolbar-actions { background: transparent !important; }
+.toolbar-actions > * { background-clip: padding-box !important; border-radius: 6px !important; }
+.toolbar-actions > * + * { margin-left: 8px !important; }
+.toolbar-actions .ant-btn { background-clip: padding-box !important; }
+.dashboard-theme .toolbar-panel > * + * { margin-left: 8px !important; }
+.dashboard-theme .toolbar-panel .ant-segmented,
+.dashboard-theme .toolbar-panel .ant-switch,
+.dashboard-theme .toolbar-panel .ant-btn-group,
+.dashboard-theme .toolbar-panel .ant-btn {
+  margin-right: 0 !important;
+}
+/* 强制所有主题下右上角控件之间留出分隔，避免贴合（特别是非 green/gold 主题） */
+.dashboard-theme.dark .toolbar-panel > * + *,
+.dashboard-theme.light .toolbar-panel > * + *,
+.dashboard-theme.blue .toolbar-panel > * + *,
+.dashboard-theme.purple .toolbar-panel > * + *,
+.dashboard-theme.orange .toolbar-panel > * + *,
+.dashboard-theme.cyan .toolbar-panel > * + *,
+.dashboard-theme.red .toolbar-panel > * + *,
+.dashboard-theme.gold .toolbar-panel > * + * {
+  margin-left: 8px !important;
+}
+.toolbar-panel .ant-select,
+.toolbar-panel .ant-btn {
+  border-radius: 6px !important;
+}
+
+/* 主题卡片背景 */
+.dashboard-theme.light .stock-grid .ant-card { background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%) !important; border-color: rgba(0,0,0,0.06) !important; }
+.dashboard-theme.blue .stock-grid .ant-card { background: linear-gradient(145deg, rgba(23,125,220,0.08) 0%, rgba(23,125,220,0.15) 100%) !important; border-color: rgba(23,125,220,0.25) !important; }
+.dashboard-theme.purple .stock-grid .ant-card { background: linear-gradient(145deg, rgba(114,46,209,0.08) 0%, rgba(114,46,209,0.15) 100%) !important; border-color: rgba(114,46,209,0.25) !important; }
+.dashboard-theme.green .stock-grid .ant-card { background: linear-gradient(145deg, rgba(54,179,126,0.08) 0%, rgba(54,179,126,0.15) 100%) !important; border-color: rgba(54,179,126,0.25) !important; }
+.dashboard-theme.orange .stock-grid .ant-card { background: linear-gradient(145deg, rgba(250,140,22,0.08) 0%, rgba(250,140,22,0.15) 100%) !important; border-color: rgba(250,140,22,0.25) !important; }
+
+/* 主题工具条背景 */
+.dashboard-theme.light .toolbar-panel { background: rgba(0,0,0,0.03) !important; border: 1px solid rgba(0,0,0,0.08) !important; border-radius: 6px !important; }
+.dashboard-theme.blue .toolbar-panel { background: rgba(23,125,220,0.12) !important; }
+.dashboard-theme.purple .toolbar-panel { background: rgba(114,46,209,0.12) !important; }
+
+/* 主题筛选面板背景 */
+.dashboard-theme.light .filter-panel { background: rgba(0,0,0,0.05) !important; border-color: rgba(0,0,0,0.08) !important; }
+.dashboard-theme.blue .filter-panel { background: rgba(23,125,220,0.12) !important; border-color: rgba(23,125,220,0.22) !important; }
+.dashboard-theme.purple .filter-panel { background: rgba(114,46,209,0.12) !important; border-color: rgba(114,46,209,0.22) !important; }
+.dashboard-theme.green .filter-panel { background: rgba(54,179,126,0.12) !important; border-color: rgba(54,179,126,0.22) !important; }
+.dashboard-theme.orange .filter-panel { background: rgba(250,140,22,0.12) !important; border-color: rgba(250,140,22,0.22) !important; }
+
+/* 主题分页控制条背景 */
+.dashboard-theme.blue .pagination-panel { background: rgba(23,125,220,0.08) !important; }
+.dashboard-theme.purple .pagination-panel { background: rgba(114,46,209,0.08) !important; }
+
+/* 默认(深色)以及新增主题的分页控制条背景 */
+.dashboard-theme.dark .pagination-panel { background: rgba(255,255,255,0.06) !important; }
+.dashboard-theme.cyan .pagination-panel { background: rgba(0,170,170,0.10) !important; }
+.dashboard-theme.red .pagination-panel { background: rgba(220,38,38,0.10) !important; }
+.dashboard-theme.gold .pagination-panel { background: rgba(250,173,20,0.10) !important; }
+
+/* 新增主题的筛选面板背景 */
+.dashboard-theme.cyan .filter-panel { background: rgba(0,170,170,0.12) !important; border-color: rgba(0,170,170,0.22) !important; }
+.dashboard-theme.red .filter-panel { background: rgba(220,38,38,0.12) !important; border-color: rgba(220,38,38,0.22) !important; }
+.dashboard-theme.gold .filter-panel { background: rgba(250,173,20,0.12) !important; border-color: rgba(250,173,20,0.22) !important; }
+
+/* 深色主题下 Select 下拉与输入文本、占位符与箭头颜色（蓝/紫/青/红/金） */
+.dashboard-theme.blue .ant-select .ant-select-selection-item,
+.dashboard-theme.blue .ant-select .ant-select-selection-placeholder,
+.dashboard-theme.blue .ant-select .ant-select-selection-item-content { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.blue .ant-select .ant-select-arrow { color: rgba(255,255,255,0.85) !important; }
+
+.dashboard-theme.purple .ant-select .ant-select-selection-item,
+.dashboard-theme.purple .ant-select .ant-select-selection-placeholder,
+.dashboard-theme.purple .ant-select .ant-select-selection-item-content { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.purple .ant-select .ant-select-arrow { color: rgba(255,255,255,0.85) !important; }
+
+.dashboard-theme.cyan .ant-select .ant-select-selection-item,
+.dashboard-theme.cyan .ant-select .ant-select-selection-placeholder,
+.dashboard-theme.cyan .ant-select .ant-select-selection-item-content { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.cyan .ant-select .ant-select-arrow { color: rgba(255,255,255,0.85) !important; }
+.dashboard-theme.red .ant-select .ant-select-selection-item,
+.dashboard-theme.red .ant-select .ant-select-selection-placeholder,
+.dashboard-theme.red .ant-select .ant-select-selection-item-content { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.red .ant-select .ant-select-arrow { color: rgba(255,255,255,0.85) !important; }
+
+.dashboard-theme.gold .ant-select .ant-select-selection-item,
+.dashboard-theme.gold .ant-select .ant-select-selection-placeholder,
+.dashboard-theme.gold .ant-select .ant-select-selection-item-content { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.gold .ant-select .ant-select-arrow { color: rgba(255,255,255,0.85) !important; }
+
+/* 主题工具条与筛选面板文字颜色 */
+/* 其它新增主题的卡片、K线容器、工具条、标题等配色补全 */
+.dashboard-theme.cyan .stock-grid .ant-card { background: linear-gradient(145deg, rgba(0,170,170,0.08) 0%, rgba(0,170,170,0.15) 100%) !important; border-color: rgba(0,170,170,0.25) !important; }
+.dashboard-theme.red .stock-grid .ant-card { background: linear-gradient(145deg, rgba(220,38,38,0.08) 0%, rgba(220,38,38,0.15) 100%) !important; border-color: rgba(220,38,38,0.25) !important; }
+.dashboard-theme.gold .stock-grid .ant-card { background: linear-gradient(145deg, rgba(250,173,20,0.08) 0%, rgba(250,173,20,0.15) 100%) !important; border-color: rgba(250,173,20,0.25) !important; }
+
+.dashboard-theme.cyan .kline-chart-container { background: rgba(0,170,170,0.05) !important; border-color: rgba(0,170,170,0.2) !important; }
+.dashboard-theme.red .kline-chart-container { background: rgba(220,38,38,0.05) !important; border-color: rgba(220,38,38,0.2) !important; }
+.dashboard-theme.gold .kline-chart-container { background: rgba(250,173,20,0.05) !important; border-color: rgba(250,173,20,0.2) !important; }
+
+.dashboard-theme.cyan .toolbar-panel { background: rgba(0,170,170,0.12) !important; }
+.dashboard-theme.red .toolbar-panel { background: rgba(220,38,38,0.12) !important; }
+.dashboard-theme.gold .toolbar-panel { background: rgba(250,173,20,0.12) !important; }
+
+.dashboard-theme.cyan .stock-header { background: rgba(0,170,170,0.12) !important; border-color: rgba(0,170,170,0.25) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.red .stock-header { background: rgba(220,38,38,0.12) !important; border-color: rgba(220,38,38,0.25) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.gold .stock-header { background: rgba(250,173,20,0.12) !important; border-color: rgba(250,173,20,0.25) !important; color: rgba(255,255,255,0.9) !important; }
+
+/* 深色主题族的输入控件（包含 green/orange/cyan/red/gold）确保文字为浅色 */
+.dashboard-theme.green .ant-select .ant-select-selection-item,
+.dashboard-theme.green .ant-select .ant-select-selection-placeholder,
+.dashboard-theme.green .ant-select .ant-select-selection-item-content { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.green .ant-select .ant-select-arrow { color: rgba(255,255,255,0.85) !important; }
+
+.dashboard-theme.orange .ant-select .ant-select-selection-item,
+.dashboard-theme.orange .ant-select .ant-select-selection-placeholder,
+.dashboard-theme.orange .ant-select .ant-select-selection-item-content { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.orange .ant-select .ant-select-arrow { color: rgba(255,255,255,0.85) !important; }
+
+/* 输入框底色与边框，确保对比度（green/orange/cyan/red/gold） */
+.dashboard-theme.green .ant-input { background: rgba(54,179,126,0.1) !important; border-color: rgba(54,179,126,0.3) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.green .ant-select-selector { background: transparent !important; border-color: rgba(54,179,126,0.3) !important; color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.orange .ant-input { background: rgba(250,140,22,0.1) !important; border-color: rgba(250,140,22,0.3) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.orange .ant-select-selector { background: transparent !important; border-color: rgba(250,140,22,0.3) !important; color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.cyan .ant-input { background: rgba(0,170,170,0.1) !important; border-color: rgba(0,170,170,0.3) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.cyan .ant-select-selector { background: transparent !important; border-color: rgba(0,170,170,0.3) !important; color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.red .ant-input { background: rgba(220,38,38,0.1) !important; border-color: rgba(220,38,38,0.3) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.red .ant-select-selector { background: transparent !important; border-color: rgba(220,38,38,0.3) !important; color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.gold .ant-input { background: rgba(250,173,20,0.1) !important; border-color: rgba(250,173,20,0.3) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.gold .ant-select-selector { background: transparent !important; border-color: rgba(250,173,20,0.3) !important; color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.light { color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .ant-segmented { background: rgba(0,0,0,0.04) !important; }
+.dashboard-theme.light .ant-segmented-item { color: rgba(0,0,0,0.65) !important; }
+.dashboard-theme.green .pagination-panel { background: rgba(54,179,126,0.08) !important; }
+.dashboard-theme.orange .pagination-panel { background: rgba(250,140,22,0.08) !important; }
+
+.dashboard-theme.light .ant-segmented-item-selected { background: #e6f4ff !important; color: #1677ff !important; box-shadow: inset 0 0 0 1px #91caff !important; }
+
+/* 统计弹窗主题样式（与 TradingCalendar 模态风格一致） */
+.stats-modal.dark .ant-modal-content {
+  background: #1f1f1f !important;
+  border: 1px solid #434343 !important;
+}
+
+.stats-modal.dark .ant-modal-header {
+  background: #1f1f1f !important;
+  /* border-bottom: 1px solid #434343 !important; */
+}
+
+.stats-modal.dark .ant-modal-body {
+  background: #1f1f1f !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.stats-modal.dark .ant-modal-title {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.stats-modal.light .ant-modal-content {
+  background: #ffffff !important;
+  border: 1px solid #e6e6e6 !important;
+}
+
+.stats-modal.light .ant-modal-header {
+  background: #ffffff !important;
+  /* border-bottom: 1px solid #e6e6e6 !important; */
+}
+
+.stats-modal.light .ant-modal-body {
+  background: #ffffff !important;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.stats-modal.light .ant-modal-title {
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+/* 统计弹窗关闭按钮颜色适配 */
+.stats-modal.dark .ant-modal-close {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.stats-modal.dark .ant-modal-close:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.stats-modal.light .ant-modal-close {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.stats-modal.light .ant-modal-close:hover {
+  color: rgba(0, 0, 0, 0.8) !important;
+  background-color: rgba(0, 0, 0, 0.06) !important;
+}
+.dashboard-theme.light .ant-input { background: #ffffff !important; border-color: rgba(0,0,0,0.15) !important; color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .ant-select-selector { background: #ffffff !important; border-color: rgba(0,0,0,0.15) !important; color: rgba(0,0,0,0.85) !important; }
+
+/* 白色主题 - 全面修复所有文字颜色与背景对比度 */
+.dashboard-theme.light .stock-grid .ant-card { background: #ffffff !important; border-color: rgba(0,0,0,0.08) !important; color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .stock-header { background: #ffffff !important; border-color: rgba(0,0,0,0.08) !important; color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .filter-panel { background: #ffffff !important; border-color: rgba(0,0,0,0.08) !important; color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .pagination-panel { background: #ffffff !important; border-color: rgba(0,0,0,0.08) !important; color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .kline-chart-container { background: #ffffff !important; border-color: rgba(0,0,0,0.08) !important; color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .toolbar-panel { background: #ffffff !important; border-color: rgba(0,0,0,0.08) !important; color: rgba(0,0,0,0.85) !important; }
+
+/* 白色主题 - 按钮和标签文字颜色 */
+.dashboard-theme.light .ant-btn { color: rgba(0,0,0,0.85) !important; background: #ffffff !important; border-color: rgba(0,0,0,0.15) !important; }
+.dashboard-theme.light .ant-btn:hover { color: rgba(0,0,0,0.85) !important; background: rgba(0,0,0,0.04) !important; border-color: rgba(0,0,0,0.25) !important; }
+.dashboard-theme.light .ant-tag { color: rgba(0,0,0,0.85) !important; background: rgba(0,0,0,0.06) !important; border-color: rgba(0,0,0,0.15) !important; }
+/* 注意：.dashboard-theme.light .control-label 样式已移至 Dashboard.css 统一管理 */
+.dashboard-theme.light .label-text { color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .label-muted { color: rgba(0,0,0,0.65) !important; }
+
+/* 白色主题 - 标题和文本 */
+.dashboard-theme.light .stock-title { color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .ant-typography { color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .ant-typography-title { color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .ant-typography-text { color: rgba(0,0,0,0.85) !important; }
+
+/* 白色主题 - 表格和列表 */
+.dashboard-theme.light .ant-table { background: #ffffff !important; color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .ant-table-thead > tr > th { background: rgba(0,0,0,0.04) !important; color: rgba(0,0,0,0.85) !important; border-color: rgba(0,0,0,0.08) !important; }
+.dashboard-theme.light .ant-table-tbody > tr > td { color: rgba(0,0,0,0.85) !important; border-color: rgba(0,0,0,0.08) !important; }
+.dashboard-theme.light .ant-table-tbody > tr:hover > td { background: rgba(0,0,0,0.04) !important; }
+
+/* 白色主题 - 模态框和弹窗 */
+.dashboard-theme.light .ant-modal-content { background: #ffffff !important; color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .ant-modal-header { background: #ffffff !important; color: rgba(0,0,0,0.85) !important; border-color: rgba(0,0,0,0.08) !important; }
+.dashboard-theme.light .ant-modal-title { color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .ant-modal-body { color: rgba(0,0,0,0.85) !important; }
+
+/* 白色主题 - 下拉菜单 */
+.dashboard-theme.light .ant-dropdown-menu { background: #ffffff !important; border-color: rgba(0,0,0,0.08) !important; }
+.dashboard-theme.light .ant-dropdown-menu-item { color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .ant-dropdown-menu-item:hover { background: rgba(0,0,0,0.04) !important; color: rgba(0,0,0,0.85) !important; }
+
+/* 白色主题 - 图标和链接 */
+.dashboard-theme.light .anticon { color: rgba(0,0,0,0.65) !important; }
+.dashboard-theme.light .ant-btn .anticon { color: rgba(0,0,0,0.65) !important; }
+/* 推送按钮图标保持白色 */
+.dashboard-theme.light .pagination-panel button .anticon { color: #fff !important; }
+.dashboard-theme.light a { color: #1890ff !important; }
+.dashboard-theme.light a:hover { color: #40a9ff !important; }
+
+/* 白色主题 - 分割线和边框 */
+.dashboard-theme.light .ant-divider { border-color: rgba(0,0,0,0.08) !important; }
+.dashboard-theme.light .ant-card-bordered { border-color: rgba(0,0,0,0.08) !important; }
+
+/* 白色主题 - 滑块和进度条 */
+.dashboard-theme.light .ant-slider-track { background: #1890ff !important; }
+.dashboard-theme.light .ant-slider-handle { border-color: #1890ff !important; }
+.dashboard-theme.light .ant-progress-text { color: rgba(0,0,0,0.85) !important; }
+
+/* 白色主题 - 提示和警告 */
+.dashboard-theme.light .ant-alert { color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .ant-message { color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .ant-notification { color: rgba(0,0,0,0.85) !important; }
+
+/* 白色主题 - 工具提示 */
+.dashboard-theme.light .ant-tooltip-inner { background: rgba(0,0,0,0.85) !important; color: #ffffff !important; }
+.dashboard-theme.light .ant-tooltip-arrow::before { background: rgba(0,0,0,0.85) !important; }
+
+/* 白色主题 - 加载状态 */
+.dashboard-theme.light .ant-spin-dot-item { background: rgba(0,0,0,0.45) !important; }
+.dashboard-theme.light .ant-spin-text { color: rgba(0,0,0,0.65) !important; }
+
+/* 白色主题 - 空状态 */
+.dashboard-theme.light .ant-empty-description { color: rgba(0,0,0,0.45) !important; }
+
+/* 白色主题 - 面包屑 */
+.dashboard-theme.light .ant-breadcrumb { color: rgba(0,0,0,0.65) !important; }
+.dashboard-theme.light .ant-breadcrumb a { color: rgba(0,0,0,0.65) !important; }
+.dashboard-theme.light .ant-breadcrumb a:hover { color: #1890ff !important; }
+
+/* 白色主题 - Segmented分段控制器 */
+.dashboard-theme.light .ant-segmented { background: rgba(0,0,0,0.04) !important; border-color: rgba(0,0,0,0.08) !important; }
+.dashboard-theme.light .ant-segmented-item { color: rgba(0,0,0,0.65) !important; }
+.dashboard-theme.light .ant-segmented-item:hover { color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .ant-segmented-item-selected { background: #e6f4ff !important; color: #1677ff !important; box-shadow: inset 0 0 0 1px #91caff !important; }
+
+/* 白色主题 - Space间距组件 */
+.dashboard-theme.light .ant-space { color: rgba(0,0,0,0.85) !important; }
+
+/* 白色主题 - 滑块组件 */
+.dashboard-theme.light .ant-slider { color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .ant-slider-rail { background: rgba(0,0,0,0.08) !important; }
+.dashboard-theme.light .ant-slider-track { background: #1890ff !important; }
+.dashboard-theme.light .ant-slider-handle { border-color: #1890ff !important; background: #ffffff !important; }
+.dashboard-theme.light .ant-slider-dot { border-color: rgba(0,0,0,0.15) !important; background: #ffffff !important; }
+.dashboard-theme.light .ant-slider-dot-active { border-color: #1890ff !important; }
+
+/* 白色主题 - 卡片内容 */
+.dashboard-theme.light .stock-card-content { color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .stock-card-content * { color: inherit !important; }
+
+/* 白色主题 - 确保所有文本元素都有正确的颜色 */
+.dashboard-theme.light span { color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light div { color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light p { color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light h1, .dashboard-theme.light h2, .dashboard-theme.light h3,
+.dashboard-theme.light h4, .dashboard-theme.light h5, .dashboard-theme.light h6 { color: rgba(0,0,0,0.85) !important; }
+
+/* 白色主题 - 卡片名字去除阴影 */
+.dashboard-theme.light .stock-title { text-shadow: none !important; }
+.dashboard-theme.light .stock-name { text-shadow: none !important; }
+.dashboard-theme.light .ant-card-head-title { text-shadow: none !important; }
+
+/* 白色主题 - tab行和全局控制行背景样式（与分页行一致） */
+.dashboard-theme.light .stock-header { background: #ffffff !important; border-color: rgba(0,0,0,0.08) !important; color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .toolbar-panel { background: #ffffff !important; border-color: rgba(0,0,0,0.08) !important; color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.light .filter-panel { background: #ffffff !important; border-color: rgba(0,0,0,0.08) !important; color: rgba(0,0,0,0.85) !important; }
+
+/* 白色主题 - 通用容器背景样式（用于tab行和全局控制行） */
+.dashboard-theme.light .toolbar-container {
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02) !important;
+}
+
+/* 白色主题 - 全局控制行（顶部导航）- 使用更高优先级覆盖内联样式 */
+.dashboard-theme.light .navigation-container {
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02) !important;
+}
+
+/* 白色主题 - 强制覆盖内联样式的背景 */
+.dashboard-theme.light div.navigation-container[style*="background"] {
+  background: #ffffff !important;
+}
+
+/* 白色主题 - 确保tab行内的所有元素都有正确的背景和文字颜色 */
+.dashboard-theme.light .ant-segmented { background: rgba(0,0,0,0.04) !important; border-color: rgba(0,0,0,0.08) !important; }
+.dashboard-theme.light .ant-segmented-item { color: rgba(0,0,0,0.65) !important; background: transparent !important; }
+.dashboard-theme.light .ant-segmented-item:hover { color: rgba(0,0,0,0.85) !important; background: rgba(0,0,0,0.04) !important; }
+.dashboard-theme.light .ant-segmented-item-selected { background: #e6f4ff !important; color: #1677ff !important; box-shadow: inset 0 0 0 1px #91caff !important; }
+
+
+
+
+
+
+
+/* 深色主题 - 所有下拉选择器样式 */
+.dashboard-theme.dark .ant-select-selector { background: transparent !important; border-color: rgba(255,255,255,0.2) !important; color: #ffffff !important; }
+.dashboard-theme.dark .ant-select-selection-item { color: #ffffff !important; }
+.dashboard-theme.dark .ant-select-arrow { color: #ffffff !important; }
+.dashboard-theme.dark .ant-select-selection-placeholder { color: rgba(255,255,255,0.45) !important; }
+
+/* 修复下拉菜单样式 - 所有主题 */
+.ant-select-dropdown {
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  max-height: 300px !important;
+  overflow: hidden !important;
+}
+.ant-select-item { color: rgba(0,0,0,0.85) !important; }
+.ant-select-item:hover { background: rgba(0,0,0,0.04) !important; color: rgba(0,0,0,0.85) !important; }
+.ant-select-item-option-selected { background: #e6f7ff !important; color: #1890ff !important; }
+
+/* 深色主题下拉菜单 */
+.dashboard-theme.dark .ant-select-dropdown {
+  background: rgba(0,0,0,0.85) !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+}
+.dashboard-theme.dark .ant-select-item { color: rgba(255,255,255,0.85) !important; }
+.dashboard-theme.dark .ant-select-item:hover { background: rgba(255,255,255,0.1) !important; color: #ffffff !important; }
+.dashboard-theme.dark .ant-select-item-option-selected { background: rgba(24,144,255,0.2) !important; color: #40a9ff !important; }
+
+/* 修复下拉菜单滚动条样式 */
+.ant-select-dropdown .rc-virtual-list-scrollbar {
+  width: 6px !important;
+  background: transparent !important;
+}
+.ant-select-dropdown .rc-virtual-list-scrollbar-thumb {
+  background: rgba(0,0,0,0.2) !important;
+  border-radius: 3px !important;
+  border: none !important;
+}
+.ant-select-dropdown .rc-virtual-list-scrollbar-thumb:hover {
+  background: rgba(0,0,0,0.4) !important;
+}
+
+/* 深色主题下拉菜单滚动条 */
+.dashboard-theme.dark .ant-select-dropdown .rc-virtual-list-scrollbar-thumb {
+  background: rgba(255,255,255,0.3) !important;
+}
+.dashboard-theme.dark .ant-select-dropdown .rc-virtual-list-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.5) !important;
+}
+
+/* 完全隐藏滚动条 - 最强力的方式 */
+.ant-select-dropdown .rc-virtual-list-scrollbar,
+.ant-select-dropdown .rc-virtual-list-scrollbar-track,
+.ant-select-dropdown .rc-virtual-list-scrollbar-thumb {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* 隐藏所有虚拟滚动相关的滚动条 */
+.ant-select-dropdown .rc-virtual-list {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE/Edge */
+  overflow-x: hidden !important;
+}
+
+.ant-select-dropdown .rc-virtual-list::-webkit-scrollbar {
+  display: none !important; /* Chrome/Safari/Opera */
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* 隐藏任何可能的滚动条容器 */
+.ant-select-dropdown .rc-virtual-list-holder {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.ant-select-dropdown .rc-virtual-list-holder::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+}
+
+/* 通用滚动条隐藏 - 针对所有可能的滚动容器 */
+.ant-select-dropdown * {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.ant-select-dropdown *::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* 搜索框主题样式 - 输入框区域 (使用更强的选择器) */
+.dashboard-theme.dark .search-input-wrapper .ant-input-search .ant-input,
+.dashboard-theme.dark .search-input-wrapper .ant-input-search .ant-input-affix-wrapper { background: rgba(255,255,255,0.1) !important; border-color: rgba(255,255,255,0.2) !important; color: rgba(255,255,255,0.85) !important; }
+
+.dashboard-theme.light .search-input-wrapper .ant-input-search .ant-input,
+.dashboard-theme.light .search-input-wrapper .ant-input-search .ant-input-affix-wrapper { background: rgba(0,0,0,0.02) !important; border-color: rgba(0,0,0,0.15) !important; color: rgba(0,0,0,0.85) !important; }
+
+.dashboard-theme.blue .search-input-wrapper .ant-input-search .ant-input,
+.dashboard-theme.blue .search-input-wrapper .ant-input-search .ant-input-affix-wrapper { background: rgba(23,125,220,0.15) !important; border-color: rgba(23,125,220,0.25) !important; color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.purple .search-input-wrapper .ant-input-search .ant-input,
+.dashboard-theme.purple .search-input-wrapper .ant-input-search .ant-input-affix-wrapper { background: rgba(114,46,209,0.18) !important; border-color: rgba(114,46,209,0.28) !important; color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.green .search-input-wrapper .ant-input-search .ant-input,
+.dashboard-theme.green .search-input-wrapper .ant-input-search .ant-input-affix-wrapper { background: rgba(54,179,126,0.18) !important; border-color: rgba(54,179,126,0.28) !important; color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.orange .search-input-wrapper .ant-input-search .ant-input,
+.dashboard-theme.orange .search-input-wrapper .ant-input-search .ant-input-affix-wrapper { background: rgba(250,140,22,0.20) !important; border-color: rgba(250,140,22,0.30) !important; color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.cyan .search-input-wrapper .ant-input-search .ant-input,
+.dashboard-theme.cyan .search-input-wrapper .ant-input-search .ant-input-affix-wrapper { background: rgba(0,170,170,0.18) !important; border-color: rgba(0,170,170,0.28) !important; color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.red .search-input-wrapper .ant-input-search .ant-input,
+.dashboard-theme.red .search-input-wrapper .ant-input-search .ant-input-affix-wrapper { background: rgba(220,38,38,0.18) !important; border-color: rgba(220,38,38,0.28) !important; color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.gold .search-input-wrapper .ant-input-search .ant-input,
+.dashboard-theme.gold .search-input-wrapper .ant-input-search .ant-input-affix-wrapper { background: rgba(250,173,20,0.18) !important; border-color: rgba(250,173,20,0.28) !important; color: rgba(255,255,255,0.9) !important; }
+
+/* 搜索框主题样式 - 搜索按钮 (使用更强的选择器) */
+.dashboard-theme.dark .search-input-wrapper .ant-input-search .ant-input-group-addon .ant-btn { background: rgba(255,255,255,0.1) !important; border-color: rgba(255,255,255,0.2) !important; color: rgba(255,255,255,0.85) !important; }
+.dashboard-theme.light .search-input-wrapper .ant-input-search .ant-input-group-addon .ant-btn { background: rgba(0,0,0,0.02) !important; border-color: rgba(0,0,0,0.15) !important; color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.blue .search-input-wrapper .ant-input-search .ant-input-group-addon .ant-btn { background: rgba(23,125,220,0.15) !important; border-color: rgba(23,125,220,0.25) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.purple .search-input-wrapper .ant-input-search .ant-input-group-addon .ant-btn { background: rgba(114,46,209,0.18) !important; border-color: rgba(114,46,209,0.28) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.green .search-input-wrapper .ant-input-search .ant-input-group-addon .ant-btn { background: rgba(54,179,126,0.18) !important; border-color: rgba(54,179,126,0.28) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.orange .search-input-wrapper .ant-input-search .ant-input-group-addon .ant-btn { background: rgba(250,140,22,0.20) !important; border-color: rgba(250,140,22,0.30) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.cyan .search-input-wrapper .ant-input-search .ant-input-group-addon .ant-btn { background: rgba(0,170,170,0.18) !important; border-color: rgba(0,170,170,0.28) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.red .search-input-wrapper .ant-input-search .ant-input-group-addon .ant-btn { background: rgba(220,38,38,0.18) !important; border-color: rgba(220,38,38,0.28) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.gold .search-input-wrapper .ant-input-search .ant-input-group-addon .ant-btn { background: rgba(250,173,20,0.18) !important; border-color: rgba(250,173,20,0.28) !important; color: rgba(255,255,255,0.9) !important; }
+/* 搜索框主题样式 - placeholder文字颜色与排序按钮文字颜色保持一致 */
+.dashboard-theme.dark .search-input-wrapper input::placeholder { color: #ffffff !important; background: transparent !important; }
+.dashboard-theme.light .search-input-wrapper input::placeholder { color: #000000 !important; background: transparent !important; }
+.dashboard-theme.blue .search-input-wrapper input::placeholder { color: #ffffff !important; background: transparent !important; }
+.dashboard-theme.purple .search-input-wrapper input::placeholder { color: #ffffff !important; background: transparent !important; }
+.dashboard-theme.green .search-input-wrapper input::placeholder { color: #ffffff !important; background: transparent !important; }
+.dashboard-theme.orange .search-input-wrapper input::placeholder { color: #ffffff !important; background: transparent !important; }
+.dashboard-theme.cyan .search-input-wrapper input::placeholder { color: #ffffff !important; background: transparent !important; }
+.dashboard-theme.red .search-input-wrapper input::placeholder { color: #ffffff !important; background: transparent !important; }
+.dashboard-theme.gold .search-input-wrapper input::placeholder { color: #ffffff !important; background: transparent !important; }
+
+/* 搜索框主题样式 - 额外的选择器确保覆盖所有情况 */
+.dashboard-theme.dark .search-input-wrapper .ant-input-search-group-wrapper .ant-input-wrapper .ant-input { background: rgba(255,255,255,0.1) !important; border-color: rgba(255,255,255,0.2) !important; color: rgba(255,255,255,0.85) !important; }
+.dashboard-theme.light .search-input-wrapper .ant-input-search-group-wrapper .ant-input-wrapper .ant-input { background: rgba(0,0,0,0.02) !important; border-color: rgba(0,0,0,0.15) !important; color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.blue .search-input-wrapper .ant-input-search-group-wrapper .ant-input-wrapper .ant-input { background: rgba(23,125,220,0.15) !important; border-color: rgba(23,125,220,0.25) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.purple .search-input-wrapper .ant-input-search-group-wrapper .ant-input-wrapper .ant-input { background: rgba(114,46,209,0.18) !important; border-color: rgba(114,46,209,0.28) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.green .search-input-wrapper .ant-input-search-group-wrapper .ant-input-wrapper .ant-input { background: rgba(54,179,126,0.18) !important; border-color: rgba(54,179,126,0.28) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.orange .search-input-wrapper .ant-input-search-group-wrapper .ant-input-wrapper .ant-input { background: rgba(250,140,22,0.20) !important; border-color: rgba(250,140,22,0.30) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.cyan .search-input-wrapper .ant-input-search-group-wrapper .ant-input-wrapper .ant-input { background: rgba(0,170,170,0.18) !important; border-color: rgba(0,170,170,0.28) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.red .search-input-wrapper .ant-input-search-group-wrapper .ant-input-wrapper .ant-input { background: rgba(220,38,38,0.18) !important; border-color: rgba(220,38,38,0.28) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.gold .search-input-wrapper .ant-input-search-group-wrapper .ant-input-wrapper .ant-input { background: rgba(250,173,20,0.18) !important; border-color: rgba(250,173,20,0.28) !important; color: rgba(255,255,255,0.9) !important; }
+
+/* 搜索框主题样式 - 输入组合包装器 */
+.dashboard-theme.dark .search-input-wrapper .ant-input-group-wrapper .ant-input-wrapper .ant-input-affix-wrapper { background: rgba(255,255,255,0.1) !important; border-color: rgba(255,255,255,0.2) !important; }
+.dashboard-theme.light .search-input-wrapper .ant-input-group-wrapper .ant-input-wrapper .ant-input-affix-wrapper { background: rgba(0,0,0,0.02) !important; border-color: rgba(0,0,0,0.15) !important; }
+.dashboard-theme.blue .search-input-wrapper .ant-input-group-wrapper .ant-input-wrapper .ant-input-affix-wrapper { background: rgba(23,125,220,0.15) !important; border-color: rgba(23,125,220,0.25) !important; }
+.dashboard-theme.purple .search-input-wrapper .ant-input-group-wrapper .ant-input-wrapper .ant-input-affix-wrapper { background: rgba(114,46,209,0.18) !important; border-color: rgba(114,46,209,0.28) !important; }
+.dashboard-theme.green .search-input-wrapper .ant-input-group-wrapper .ant-input-wrapper .ant-input-affix-wrapper { background: rgba(54,179,126,0.18) !important; border-color: rgba(54,179,126,0.28) !important; }
+.dashboard-theme.orange .search-input-wrapper .ant-input-group-wrapper .ant-input-wrapper .ant-input-affix-wrapper { background: rgba(250,140,22,0.20) !important; border-color: rgba(250,140,22,0.30) !important; }
+.dashboard-theme.cyan .search-input-wrapper .ant-input-group-wrapper .ant-input-wrapper .ant-input-affix-wrapper { background: rgba(0,170,170,0.18) !important; border-color: rgba(0,170,170,0.28) !important; }
+.dashboard-theme.red .search-input-wrapper .ant-input-group-wrapper .ant-input-wrapper .ant-input-affix-wrapper { background: rgba(220,38,38,0.18) !important; border-color: rgba(220,38,38,0.28) !important; }
+.dashboard-theme.gold .search-input-wrapper .ant-input-group-wrapper .ant-input-wrapper .ant-input-affix-wrapper { background: rgba(250,173,20,0.18) !important; border-color: rgba(250,173,20,0.28) !important; }
+
+/* 额外的占位符样式确保透明背景 - 使用最强的选择器 */
+.dashboard-theme .search-input-wrapper .ant-input-search .ant-input::placeholder,
+.dashboard-theme .search-input-wrapper .ant-input-search-group-wrapper .ant-input-wrapper .ant-input::placeholder,
+.dashboard-theme .search-input-wrapper .ant-input-group-wrapper .ant-input-wrapper .ant-input::placeholder,
+.dashboard-theme .search-input-wrapper .ant-input::placeholder,
+.search-input-wrapper .ant-input::placeholder,
+.search-input-wrapper input::placeholder,
+.search-input-wrapper *::placeholder {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* 强制移除搜索框内所有元素的背景 */
+.search-input-wrapper .ant-input-search .ant-input,
+.search-input-wrapper .ant-input-affix-wrapper,
+.search-input-wrapper .ant-input-group-wrapper,
+.search-input-wrapper input {
+  background: inherit !important;
+}
+
+/* 特别针对占位符的样式重写 */
+.search-input-wrapper input[placeholder]::placeholder {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* 最强力的占位符背景移除 - 使用通配符 */
+.search-input-wrapper *::placeholder,
+.search-input-wrapper *::-webkit-input-placeholder,
+.search-input-wrapper *::-moz-placeholder,
+.search-input-wrapper *:-ms-input-placeholder,
+.search-input-wrapper *:-moz-placeholder {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* 确保输入框本身也没有背景干扰 */
+.search-input-wrapper .ant-input-search,
+.search-input-wrapper .ant-input-search .ant-input-group,
+.search-input-wrapper .ant-input-search .ant-input-group .ant-input-group-addon {
+  background: inherit !important;
+}
+
+/* 针对具体的input元素结构 - 最强力的选择器 */
+.search-input-wrapper input.ant-input.ant-input-sm[placeholder="搜索名称/代码"],
+.search-input-wrapper input.ant-input[placeholder="搜索名称/代码"],
+.search-input-wrapper input[type="search"][placeholder="搜索名称/代码"],
+.search-input-wrapper input[placeholder="搜索名称/代码"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* 针对具体的input占位符 */
+.search-input-wrapper input.ant-input.ant-input-sm[placeholder="搜索名称/代码"]::placeholder,
+.search-input-wrapper input.ant-input[placeholder="搜索名称/代码"]::placeholder,
+.search-input-wrapper input[type="search"][placeholder="搜索名称/代码"]::placeholder,
+.search-input-wrapper input[placeholder="搜索名称/代码"]::placeholder {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* 浏览器兼容性 - 针对具体input */
+.search-input-wrapper input[placeholder="搜索名称/代码"]::-webkit-input-placeholder {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+.search-input-wrapper input[placeholder="搜索名称/代码"]::-moz-placeholder {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+.search-input-wrapper input[placeholder="搜索名称/代码"]:-ms-input-placeholder {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* 针对完整的span容器结构 - 移除所有背景 */
+.search-input-wrapper .ant-input-wrapper.ant-input-group,
+.search-input-wrapper .ant-input-affix-wrapper.ant-input-affix-wrapper-sm,
+.search-input-wrapper .ant-input-affix-wrapper,
+.search-input-wrapper .ant-input-group-addon,
+.search-input-wrapper span.ant-input-wrapper,
+.search-input-wrapper span.ant-input-affix-wrapper {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* 针对具体的CSS类组合 */
+.search-input-wrapper .css-dev-only-do-not-override-1eq50hr {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* 强制所有嵌套元素透明背景 */
+.search-input-wrapper span,
+.search-input-wrapper .ant-input-wrapper,
+.search-input-wrapper .ant-input-affix-wrapper,
+.search-input-wrapper .ant-input-group,
+.search-input-wrapper .ant-input-group-addon {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* 确保搜索按钮容器也透明 */
+.search-input-wrapper .ant-input-group-addon .ant-btn {
+  background: inherit !important;
+}
+
+/* 整个搜索框容器透明 */
+.search-input-wrapper .ant-input-wrapper.ant-input-group,
+.search-input-wrapper .ant-input-affix-wrapper.ant-input-affix-wrapper-sm,
+.search-input-wrapper .ant-input-affix-wrapper,
+.search-input-wrapper span.ant-input-wrapper,
+.search-input-wrapper span.ant-input-affix-wrapper,
+.search-input-wrapper .ant-input-search,
+.search-input-wrapper .ant-input-group,
+.search-input-wrapper .ant-input-group-addon {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* input 背景改为透明 */
+.search-input-wrapper input.ant-input {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* 强制 input 背景透明（覆盖 AntD 默认样式）*/
+.search-input-wrapper .ant-input,
+.search-input-wrapper .ant-input-sm,
+.search-input-wrapper .ant-input-affix-wrapper input.ant-input,
+.search-input-wrapper input.ant-input.ant-input-sm,
+.search-input-wrapper input[type="search"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* WebKit 浏览器的搜索框默认外观去除，避免内置底色 */
+.search-input-wrapper input[type="search"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.search-input-wrapper input[type="search"]::-webkit-search-decoration,
+.search-input-wrapper input[type="search"]::-webkit-search-cancel-button,
+.search-input-wrapper input[type="search"]::-webkit-search-results-button,
+.search-input-wrapper input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+/* 前后缀容器也保持透明 */
+.search-input-wrapper .ant-input-suffix,
+.search-input-wrapper .ant-input-prefix {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+
+/* 搜索按钮继承主题背景 */
+.search-input-wrapper .ant-input-group-addon .ant-btn {
+  background: inherit !important;
+  background-color: inherit !important;
+}
+
+/* 占位符保持透明背景，只显示文字 */
+.search-input-wrapper input::placeholder,
+.search-input-wrapper input::-webkit-input-placeholder,
+.search-input-wrapper input::-moz-placeholder,
+.search-input-wrapper input:-ms-input-placeholder {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* 移除搜索框所有可能的背景样式 */
+.dashboard-theme .search-input-wrapper .ant-input-search,
+.dashboard-theme .search-input-wrapper .ant-input-search .ant-input,
+.dashboard-theme .search-input-wrapper .ant-input-search .ant-input-affix-wrapper,
+.dashboard-theme .search-input-wrapper .ant-input-search-group-wrapper,
+.dashboard-theme .search-input-wrapper .ant-input-group-wrapper {
+  background-image: none !important;
+}
+
+/* 确保占位符文字没有任何背景效果 */
+.search-input-wrapper input::-webkit-input-placeholder { background: transparent !important; background-color: transparent !important; }
+.search-input-wrapper input::-moz-placeholder { background: transparent !important; background-color: transparent !important; }
+.search-input-wrapper input:-ms-input-placeholder { background: transparent !important; background-color: transparent !important; }
+.search-input-wrapper input:-moz-placeholder { background: transparent !important; background-color: transparent !important; }
+
+/* 针对自定义搜索输入框类的强制样式 */
+.custom-search-input.ant-input-search .ant-input::placeholder,
+.custom-search-input .ant-input::placeholder,
+.custom-search-input input::placeholder {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.custom-search-input.ant-input-search .ant-input,
+.custom-search-input .ant-input,
+.custom-search-input input {
+  background-image: none !important;
+}
+
+.dashboard-theme.blue { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.blue .ant-segmented { background: rgba(23,125,220,0.2) !important; }
+
+.dashboard-theme.blue .ant-input { background: rgba(23,125,220,0.1) !important; border-color: rgba(23,125,220,0.3) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.blue .ant-select-selector { background: rgba(23,125,220,0.1) !important; border-color: rgba(23,125,220,0.3) !important; color: rgba(255,255,255,0.9) !important; }
+
+.dashboard-theme.purple { color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.purple .ant-segmented { background: rgba(114,46,209,0.2) !important; }
+
+.dashboard-theme.purple .ant-input { background: rgba(114,46,209,0.1) !important; border-color: rgba(114,46,209,0.3) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.purple .ant-select-selector { background: rgba(114,46,209,0.1) !important; border-color: rgba(114,46,209,0.3) !important; color: rgba(255,255,255,0.9) !important; }
+
+/* 主题K线容器与网格 */
+.dashboard-theme.light .kline-chart-container { background: rgba(255,255,255,0.95) !important; border-color: rgba(0,0,0,0.08) !important; }
+.dashboard-theme.blue .kline-chart-container { background: rgba(23,125,220,0.05) !important; border-color: rgba(23,125,220,0.2) !important; }
+.dashboard-theme.purple .kline-chart-container { background: rgba(114,46,209,0.05) !important; border-color: rgba(114,46,209,0.2) !important; }
+.dashboard-theme.green .kline-chart-container { background: rgba(54,179,126,0.05) !important; border-color: rgba(54,179,126,0.2) !important; }
+.dashboard-theme.orange .kline-chart-container { background: rgba(250,140,22,0.05) !important; border-color: rgba(250,140,22,0.2) !important; }
+
+/* 主题股票header */
+.dashboard-theme.light .stock-header { background: rgba(0,0,0,0.03) !important; border-color: rgba(0,0,0,0.08) !important; color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme.blue .stock-header { background: rgba(23,125,220,0.12) !important; border-color: rgba(23,125,220,0.25) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.purple .stock-header { background: rgba(114,46,209,0.12) !important; border-color: rgba(114,46,209,0.25) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.green .stock-header { background: rgba(54,179,126,0.12) !important; border-color: rgba(54,179,126,0.25) !important; color: rgba(255,255,255,0.9) !important; }
+.dashboard-theme.orange .stock-header { background: rgba(250,140,22,0.12) !important; border-color: rgba(250,140,22,0.25) !important; color: rgba(255,255,255,0.9) !important; }
+
+
+/* 主题文字对比度：通用标签与标题等 */
+.dashboard-theme .label-text { color: rgba(255,255,255,0.95) !important; }
+.dashboard-theme.light .label-text { color: rgba(0,0,0,0.85) !important; }
+.dashboard-theme .label-muted { color: rgba(255,255,255,0.7) !important; }
+.dashboard-theme.light .label-muted { color: rgba(0,0,0,0.65) !important; }
+
+
+/* K线图容器 - 稳定布局，优化渲染性能 */
+.stock-grid .kline-chart-container {
+  width: 100% !important;
+  flex: 1 !important;
+  min-height: 200px !important;
+  overflow: hidden !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  position: relative !important;
+  /* 优化渲染性能 */
+  will-change: auto;
+  contain: layout style paint;
+}
+
+.stock-grid .kline-chart-container::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(45deg, transparent 49%, rgba(255, 255, 255, 0.01) 50%, transparent 51%) !important;
+  pointer-events: none !important;
+}
+
+/* 全屏遮罩层 - 固定背景，不影响卡片定位 */
+.fullscreen-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(0, 0, 0, 0.85) !important;
+  z-index: 10000 !important;
+  backdrop-filter: blur(8px) !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+/* 全屏卡片样式 - 完全固定定位，绝对不跟随鼠标 */
+.fullscreen-card.ant-card {
+  position: fixed !important;
+  top: 5vh !important;
+  left: 2.5vw !important;
+  right: 2.5vw !important;
+  width: auto !important;
+  height: 90vh !important;
+  max-width: none !important;
+  min-width: none !important;
+  z-index: 10001 !important;
+  box-shadow: none !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  margin: 0 !important;
+  transform: none !important;
+  pointer-events: auto !important;
+  user-select: none !important;
+}
+/* 全屏时的K线图容器优化 */
+.fullscreen-card .kline-chart-container {
+  min-height: calc(90vh - 180px) !important;
+  height: calc(90vh - 180px) !important;
+}
+
+/* 强制防止全屏卡片被拖拽或跟随鼠标，但保留双击事件 */
+.fullscreen-card,
+.fullscreen-card * {
+  user-select: none !important;
+  -webkit-user-drag: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  -ms-user-drag: none !important;
+  -webkit-touch-callout: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  /* touch-action: none !important; 移除这行，因为它会阻止双击事件 */
+}
+
+/* 只对K线图区域保留双击功能 */
+.fullscreen-card .kline-chart-container {
+  touch-action: manipulation !important; /* 允许双击等手势 */
+}
+
+.fullscreen-card {
+  position: fixed !important;
+  will-change: auto !important;
+}
+
+/* 禁用所有可能导致移动的CSS属性 */
+.fullscreen-card.ant-card {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* 按钮紧凑布局 */
+.stock-grid .ant-btn {
+  font-size: 12px !important;
+  padding: 2px 6px !important;
+  height: 24px !important;
+  line-height: 20px !important;
+}
+
+/* 标签紧凑布局 */
+.stock-grid .ant-tag {
+  font-size: 11px !important;
+  padding: 1px 4px !important;
+  margin: 1px !important;
+}
+
+/* 分段控制器紧凑布局 */
+.stock-grid .ant-segmented {
+  font-size: 11px !important;
+  margin: 4px 0 !important;
+}
+
+.stock-grid .ant-segmented .ant-segmented-item {
+  padding: 2px 6px !important;
+  min-height: 24px !important;
+}
+
+/* 股票信息区域优化 - 更清晰的层次结构 */
+.stock-grid .stock-header {
+  padding: 6px 12px !important;
+  margin-bottom: 4px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  border-radius: 8px !important;
+  /* 内容保持在header内，按钮可换行 */
+  overflow: hidden !important;
+}
+
+/* 防止名称被挤压成竖排，始终横向展示并省略 */
+.stock-grid .stock-header > div:first-child { min-width: 0 !important; }
+.stock-grid .stock-title {
+  font-size: 15px !important;
+  margin: 0 !important;
+  line-height: 1.1 !important;
+  font-weight: 700 !important;
+  color: rgba(255,255,255,0.95) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+.dashboard-theme.light .stock-grid .stock-title {
+  color: rgba(0,0,0,0.85) !important;
+}
+.stock-grid .stock-title span { white-space: nowrap !important; }
+
+/* Code 样式 - 与 name 颜色一致但更低调 */
+.stock-grid .stock-code {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  color: rgba(255,255,255,0.95) !important;
+  opacity: 0.65 !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+}
+.dashboard-theme.light .stock-grid .stock-code {
+  color: rgba(0,0,0,0.85) !important;
+}
+
+/* 标签按钮样式 - 与 name 颜色一致但更低调 */
+.stock-grid .stock-tags {
+  color: #1890ff !important;
+  opacity: 0.6 !important;
+  transition: opacity 0.2s ease !important;
+}
+.stock-grid .stock-tags:hover {
+  opacity: 0.8 !important;
+}
+.dashboard-theme.light .stock-grid .stock-tags {
+  color: rgba(0,0,0,0.85) !important;
+}
+
+/* 全屏卡片中的 Code 和标签样式 */
+.fullscreen-card .stock-code {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  color: rgba(255,255,255,0.95) !important;
+  opacity: 0.65 !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+}
+.dashboard-theme.light .fullscreen-card .stock-code {
+  color: rgba(0,0,0,0.85) !important;
+}
+
+.fullscreen-card .stock-tags {
+  color: #1890ff !important;
+  opacity: 0.6 !important;
+  transition: opacity 0.2s ease !important;
+}
+.fullscreen-card .stock-tags:hover {
+  opacity: 0.8 !important;
+}
+.dashboard-theme.light .fullscreen-card .stock-tags {
+  color: #1890ff !important;
+}
+
+/* 右侧按钮区域根据宽度自动换行，始终在header内 */
+.stock-grid .stock-header > div:last-child {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+  justify-content: flex-end !important;
+}
+
+.stock-grid .stock-subtitle {
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+  margin: 2px 0 0 0 !important;
+  opacity: 0.7 !important;
+}
+
+.stock-grid .price-display {
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7) !important;
+}
+
+.stock-grid .change-display {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+}
+
+/* 功能控制区域优化 - 简洁控制面板风格 */
+/* 注意：.stock-grid .stock-controls 样式已移至 Dashboard.css 统一管理 */
+
+.stock-grid .control-row {
+  margin-bottom: 6px !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+}
+/* 注意：.stock-grid .control-label 样式已移至 Dashboard.css 统一管理 */
+
+.stock-grid .control-row:last-child {
+  margin-bottom: 0 !important;
+}
+
+
+
+
+.fullscreen-card {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 10000 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.fullscreen-card .ant-card-body {
+  padding: 10px !important;
+  height: 100% !important;
+}
+
+/* 股票卡片内容容器 */
+.stock-card-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 股票头部信息区域 */
+.stock-header {
+  margin-bottom: 2px;
+}
+
+.fullscreen-card .stock-header {
+  padding: 6px 12px;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+
+/* 股票头部行布局 */
+.stock-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+
+.stock-header-left {
+  flex: 1;
+}
+
+.stock-header-right {
+  text-align: right;
+  margin-right: 20px;
+  min-width: 320px;
+}
+
+.fullscreen-card .stock-header-right {
+  min-width: 0;
+  white-space: nowrap;
+  flex-shrink: 1;
+}
+
+/* 股票标题样式 */
+.stock-title {
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stock-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.stock-title a:hover {
+  color: #1890ff;
+}
+
+/* 热门标识 */
+.hot-indicator {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.fullscreen-card .hot-indicator {
+  font-size: 14px;
+}
+
+/* 自选按钮样式 */
+.favorite-button {
+  padding: 0 4px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 1;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.8);
+}
+
+/* 快捷键提示样式 */
+.shortcut-tip {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 4px;
+}
+
+.shortcut-tip-title {
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.shortcut-tip-content {
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.fullscreen-card .shortcut-tip {
+  padding: 6px 0;
+}
+
+.fullscreen-card .shortcut-tip-title {
+  font-size: 10px;
+  margin-bottom: 3px;
+}
+
+.fullscreen-card .shortcut-tip-content {
+  font-size: 9px;
+  line-height: 1.3;
+}
+
+/* 分组菜单项样式 */
+.group-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 120px;
+}
+
+.group-menu-item-content {
+  display: flex;
+  align-items: center;
+}
+
+/* 快捷键标识 */
+.shortcut-key {
+  background: rgba(255,255,255,0.2);
+  padding: 1px 4px;
+  border-radius: 2px;
+  margin-right: 6px;
+  font-size: 10px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.fullscreen-card .shortcut-key {
+  padding: 1px 3px;
+  margin-right: 4px;
+  font-size: 9px;
+}
+
+/* 分组状态指示器 */
+.group-status {
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+/* 管理分组按钮样式 */
+.manage-groups-button {
+  color: #1890ff;
+}
+
+/* 操作按钮容器 */
+.action-buttons {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.fullscreen-card .action-buttons {
+  gap: 8px;
+}
+
+/* 切换按钮样式 */
+.switch-button {
+  color: #1890ff;
+  border: 1px solid #1890ff;
+  background: rgba(24, 144, 255, 0.1);
+}
+
+.switch-button.active {
+  color: #52c41a;
+  border-color: #52c41a;
+  background: rgba(82, 196, 26, 0.1);
+}
+
+.switch-button.warning {
+  color: #faad14;
+  border-color: #faad14;
+  background: rgba(250, 173, 20, 0.1);
+}
+
+/* 全屏按钮样式 */
+.fullscreen-button {
+  color: rgba(255,255,255,0.6);
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+}
+
+.fullscreen-button:hover {
+  color: rgba(255,255,255,0.8);
+  border-color: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.1);
+}
+
+/* 关闭按钮样式 */
+.close-button {
+  color: rgba(255,255,255,0.8);
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.1);
+}
+
+.close-button:hover {
+  color: #ff4d4f;
+  border-color: #ff4d4f;
+  background: rgba(255, 77, 79, 0.1);
+}
+
+/* 控制面板样式 */
+.control-panel {
+  padding: 8px 16px;
+  margin-bottom: 8px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+}
+
+.control-panel-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.control-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+}
+
+/* 简洁控制面板样式 */
+.stock-controls {
+  padding: 0 2px !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+  border-radius: 4px !important;
+}
+
+/* 针对 .stock-grid 内的 .stock-controls，确保样式生效 */
+.stock-grid .stock-controls {
+  overflow: hidden !important; /* 防止内容溢出 */
+  padding: 0 2px !important;
+  margin: 4px 0 !important;
+  min-height: 32px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 4px !important;
+  border: none !important;
+  backdrop-filter: blur(10px) !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.stock-grid .control-label {
+  white-space: nowrap !important;
+  font-size: 14px !important;
+}
+
+/* K线卡片控制条样式 */
+.kline-card-select .ant-select-selector {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.kline-card-select .ant-select-selection-item {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 14px !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.kline-card-select .ant-select-selection-placeholder {
+  font-size: 14px !important;
+}
+
+.kline-card-select .ant-select-arrow {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* 全屏卡片控制条面板 */
+.fullscreen-controls-panel {
+  padding: 8px 16px !important;
+  margin-bottom: 8px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.fullscreen-control-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  min-width: 40px;
+}
+
+.fullscreen-control-select .ant-select-selector {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.fullscreen-control-select .ant-select-selection-item {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 14px !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.fullscreen-control-select .ant-select-selection-placeholder {
+  font-size: 14px !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.fullscreen-control-select .ant-select-arrow {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* 白色主题下的控制条样式 */
+.dashboard-theme.light .control-label {
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.dashboard-theme.light .kline-card-select .ant-select-selector {
+  background: rgba(0, 0, 0, 0.03) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.dashboard-theme.light .kline-card-select .ant-select-selection-item {
+  color: rgba(0, 0, 0, 0.85) !important;
+  font-size: 14px !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.dashboard-theme.light .kline-card-select .ant-select-arrow {
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.dashboard-theme.light .stock-controls,
+.dashboard-theme.light .stock-grid .stock-controls {
+  background: rgba(0, 0, 0, 0.05) !important;
+}
+
+.dashboard-theme.light .fullscreen-controls-panel {
+  background: rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+.dashboard-theme.light .fullscreen-control-label {
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.dashboard-theme.light .fullscreen-control-select .ant-select-selector {
+  background: rgba(0, 0, 0, 0.03) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.dashboard-theme.light .fullscreen-control-select .ant-select-selection-item {
+  color: rgba(0, 0, 0, 0.85) !important;
+  font-size: 14px !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.dashboard-theme.light .fullscreen-control-select .ant-select-arrow {
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+/* 移除浅色主题下全屏控制条指标下拉框占位文字的灰色背景 */
+.dashboard-theme.light .fullscreen-control-select .ant-select-selection-placeholder {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 全局控制条中“指标”下拉框（global-indicator-select）去掉选中/占位文字的灰色背景 */
+.global-indicator-select .ant-select-selection-item,
+.global-indicator-select .ant-select-selection-placeholder {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.dashboard-theme.light .global-indicator-select .ant-select-selection-item,
+.dashboard-theme.light .global-indicator-select .ant-select-selection-placeholder {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Select下拉菜单样式 - 深色主题 */
+.kline-card-select .ant-select-dropdown,
+.fullscreen-control-select .ant-select-dropdown {
+  background: rgba(0, 0, 0, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Select下拉菜单样式 - 白色主题 */
+.dashboard-theme.light .kline-card-select .ant-select-dropdown,
+.dashboard-theme.light .fullscreen-control-select .ant-select-dropdown {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.compact-control-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.compact-control-group {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+}
+
+/* K线图容器样式 */
+.kline-chart-container {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+
+.fullscreen-card .kline-chart-container {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* 工具栏样式 - 单行紧凑布局 */
+.toolbar-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  flex-wrap: wrap;
+}
+
+/* 浅色主题工具栏 */
+.theme-light .toolbar-container {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+/* 深色主题工具栏 */
+.theme-dark .toolbar-container,
+.theme-blue .toolbar-container,
+.theme-purple .toolbar-container,
+.theme-green .toolbar-container,
+.theme-orange .toolbar-container,
+.theme-cyan .toolbar-container,
+.theme-red .toolbar-container,
+.theme-gold .toolbar-container {
+  background: rgba(255,255,255,0.06);
+  border: none;
+}
+
+/* 数据类型标签页样式 */
+.custom-data-type-tabs {
+  display: flex;
+  gap: 0px;
+  align-items: center;
+  margin-right: 16px;
+  border-radius: 8px;
+  padding: 2px;
+}
+
+/* 浅色主题标签页容器 */
+.theme-light .custom-data-type-tabs {
+  background: rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* 深色主题标签页容器 */
+.theme-dark .custom-data-type-tabs,
+.theme-blue .custom-data-type-tabs,
+.theme-purple .custom-data-type-tabs,
+.theme-green .custom-data-type-tabs,
+.theme-orange .custom-data-type-tabs,
+.theme-cyan .custom-data-type-tabs,
+.theme-red .custom-data-type-tabs,
+.theme-gold .custom-data-type-tabs {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.data-type-tab {
+  padding: 4px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+  height: 28px;
+  line-height: 20px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+}
+
+/* 激活状态的标签页 */
+.data-type-tab.active {
+  font-weight: 500;
+}
+
+/* 浅色主题标签页 */
+.theme-light .data-type-tab {
+  color: rgba(0,0,0,0.65);
+}
+
+.theme-light .data-type-tab.active {
+  background: #ffffff;
+  color: #1677ff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.theme-light .data-type-tab:hover:not(.active) {
+  background: rgba(255,255,255,0.7);
+  color: rgba(0,0,0,0.85);
+}
+
+/* 深色主题标签页 */
+.theme-dark .data-type-tab,
+.theme-blue .data-type-tab,
+.theme-purple .data-type-tab,
+.theme-green .data-type-tab,
+.theme-orange .data-type-tab,
+.theme-cyan .data-type-tab,
+.theme-red .data-type-tab,
+.theme-gold .data-type-tab {
+  color: rgba(255,255,255,0.75);
+}
+
+.theme-dark .data-type-tab.active,
+.theme-blue .data-type-tab.active,
+.theme-purple .data-type-tab.active,
+.theme-green .data-type-tab.active,
+.theme-orange .data-type-tab.active,
+.theme-cyan .data-type-tab.active,
+.theme-red .data-type-tab.active,
+.theme-gold .data-type-tab.active {
+  background: rgba(255,255,255,0.9);
+  color: #000000;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.theme-dark .data-type-tab:hover:not(.active),
+.theme-blue .data-type-tab:hover:not(.active),
+.theme-purple .data-type-tab:hover:not(.active),
+.theme-green .data-type-tab:hover:not(.active),
+.theme-orange .data-type-tab:hover:not(.active),
+.theme-cyan .data-type-tab:hover:not(.active),
+.theme-red .data-type-tab:hover:not(.active),
+.theme-gold .data-type-tab:hover:not(.active) {
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.9);
+}
+
+/* 搜索输入框样式 */
+.search-input-wrapper {
+  width: 160px;
+  display: inline-block;
+}
+
+/* 全局控制面板样式 */
+.global-control-panel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+}
+
+.global-control-title {
+  font-size: 12px;
+  color: rgba(255,255,255,0.9);
+  margin-right: 8px;
+}
+
+.global-control-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.global-control-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.8);
+  white-space: nowrap;
+}
+
+/* 分页面板样式 */
+.pagination-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.pagination-info {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pagination-loading {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #1890ff;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.scale-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.scale-slider {
+  width: 140px;
+}
+
+
+
+/* 加载状态样式 */
+.loading-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  flex-direction: column;
+}
+
+.loading-text {
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+/* 空状态样式 */
+.empty-container {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}
+
+/* 模态框样式 */
+.call-info-modal {
+  top: 20px;
+}
+
+.call-info-empty {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}
+
+/* 管理分组模态框样式 */
+.manage-groups-modal {
+  z-index: 10200;
+}
+
+.create-group-container {
+  margin-bottom: 16px;
+}
+
+.create-group-input {
+  margin-bottom: 8px;
+}
+
+.create-group-button {
+  width: 100%;
+}
+
+.group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.group-item:last-child {
+  border-bottom: none;
+}
+
+.group-info {
+  flex: 1;
+}
+
+.group-name {
+  margin-left: 8px;
+  color: #666;
+}
+
+.group-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.group-edit-input {
+  width: 150px;
+}
+
+/* 分页组件主题样式 */
+/* Dark主题分页样式 */
+.dashboard-theme.dark .dashboard-pagination .ant-pagination-item a,
+.dashboard-theme.dark .dashboard-pagination .ant-pagination-item span { 
+  color: rgba(255,255,255,0.85) !important; 
+}
+.dashboard-theme.dark .dashboard-pagination .ant-pagination-item { 
+  background: rgba(255,255,255,0.08) !important; 
+  border-color: rgba(255,255,255,0.15) !important; 
+}
+.dashboard-theme.dark .dashboard-pagination .ant-pagination-item-active { 
+  background: rgba(24,144,255,0.85) !important; 
+  border-color: rgba(24,144,255,0.85) !important; 
+}
+.dashboard-theme.dark .dashboard-pagination .ant-pagination-item-active a,
+.dashboard-theme.dark .dashboard-pagination .ant-pagination-item-active span { 
+  color: #fff !important; 
+}
+.dashboard-theme.dark .dashboard-pagination .ant-pagination-prev .ant-pagination-item-link,
+.dashboard-theme.dark .dashboard-pagination .ant-pagination-next .ant-pagination-item-link { 
+  color: rgba(255,255,255,0.85) !important; 
+  border-color: rgba(255,255,255,0.15) !important; 
+  background: rgba(255,255,255,0.08) !important; 
+}
+
+/* Light主题分页样式 */
+.dashboard-theme.light .dashboard-pagination .ant-pagination-item a,
+.dashboard-theme.light .dashboard-pagination .ant-pagination-item span { 
+  color: rgba(0,0,0,0.85) !important; 
+}
+.dashboard-theme.light .dashboard-pagination .ant-pagination-item { 
+  background: rgba(0,0,0,0.03) !important; 
+  border-color: rgba(0,0,0,0.08) !important; 
+}
+.dashboard-theme.light .dashboard-pagination .ant-pagination-item-active { 
+  background: rgba(24,144,255,0.9) !important; 
+  border-color: rgba(24,144,255,0.9) !important; 
+}
+.dashboard-theme.light .dashboard-pagination .ant-pagination-item-active a,
+.dashboard-theme.light .dashboard-pagination .ant-pagination-item-active span { 
+  color: #fff !important; 
+}
+.dashboard-theme.light .dashboard-pagination .ant-pagination-prev .ant-pagination-item-link,
+.dashboard-theme.light .dashboard-pagination .ant-pagination-next .ant-pagination-item-link { 
+  color: rgba(0,0,0,0.85) !important; 
+  border-color: rgba(0,0,0,0.08) !important; 
+  background: rgba(0,0,0,0.03) !important; 
+}
+
+/* Blue主题分页样式 */
+.dashboard-theme.blue .dashboard-pagination .ant-pagination-item a,
+.dashboard-theme.blue .dashboard-pagination .ant-pagination-item span { 
+  color: rgba(255,255,255,0.85) !important; 
+}
+.dashboard-theme.blue .dashboard-pagination .ant-pagination-item { 
+  background: rgba(23,125,220,0.15) !important; 
+  border-color: rgba(23,125,220,0.25) !important; 
+}
+.dashboard-theme.blue .dashboard-pagination .ant-pagination-item-active { 
+  background: rgba(23,125,220,0.85) !important; 
+  border-color: rgba(23,125,220,0.85) !important; 
+}
+.dashboard-theme.blue .dashboard-pagination .ant-pagination-item-active a,
+.dashboard-theme.blue .dashboard-pagination .ant-pagination-item-active span { 
+  color: #fff !important; 
+}
+.dashboard-theme.blue .dashboard-pagination .ant-pagination-prev .ant-pagination-item-link,
+.dashboard-theme.blue .dashboard-pagination .ant-pagination-next .ant-pagination-item-link { 
+  color: rgba(255,255,255,0.85) !important; 
+  border-color: rgba(23,125,220,0.25) !important; 
+  background: rgba(23,125,220,0.15) !important; 
+}
+
+/* Purple主题分页样式 */
+.dashboard-theme.purple .dashboard-pagination .ant-pagination-item a,
+.dashboard-theme.purple .dashboard-pagination .ant-pagination-item span { 
+  color: rgba(255,255,255,0.85) !important; 
+}
+.dashboard-theme.purple .dashboard-pagination .ant-pagination-item { 
+  background: rgba(114,46,209,0.18) !important; 
+  border-color: rgba(114,46,209,0.28) !important; 
+}
+.dashboard-theme.purple .dashboard-pagination .ant-pagination-item-active { 
+  background: rgba(114,46,209,0.85) !important; 
+  border-color: rgba(114,46,209,0.85) !important; 
+}
+.dashboard-theme.purple .dashboard-pagination .ant-pagination-item-active a,
+.dashboard-theme.purple .dashboard-pagination .ant-pagination-item-active span { 
+  color: #fff !important; 
+}
+.dashboard-theme.purple .dashboard-pagination .ant-pagination-prev .ant-pagination-item-link,
+.dashboard-theme.purple .dashboard-pagination .ant-pagination-next .ant-pagination-item-link { 
+  color: rgba(255,255,255,0.85) !important; 
+  border-color: rgba(114,46,209,0.28) !important; 
+  background: rgba(114,46,209,0.18) !important; 
+}
+
+/* Green主题分页样式 */
+.dashboard-theme.green .dashboard-pagination .ant-pagination-item a,
+.dashboard-theme.green .dashboard-pagination .ant-pagination-item span { 
+  color: rgba(255,255,255,0.85) !important; 
+}
+.dashboard-theme.green .dashboard-pagination .ant-pagination-item { 
+  background: rgba(54,179,126,0.18) !important; 
+  border-color: rgba(54,179,126,0.28) !important; 
+}
+.dashboard-theme.green .dashboard-pagination .ant-pagination-item-active { 
+  background: rgba(54,179,126,0.85) !important; 
+  border-color: rgba(54,179,126,0.85) !important; 
+}
+.dashboard-theme.green .dashboard-pagination .ant-pagination-item-active a,
+.dashboard-theme.green .dashboard-pagination .ant-pagination-item-active span { 
+  color: #fff !important; 
+}
+.dashboard-theme.green .dashboard-pagination .ant-pagination-prev .ant-pagination-item-link,
+.dashboard-theme.green .dashboard-pagination .ant-pagination-next .ant-pagination-item-link { 
+  color: rgba(255,255,255,0.85) !important; 
+  border-color: rgba(54,179,126,0.28) !important; 
+  background: rgba(54,179,126,0.18) !important; 
+}
+
+/* Orange主题分页样式 */
+.dashboard-theme.orange .dashboard-pagination .ant-pagination-item a,
+.dashboard-theme.orange .dashboard-pagination .ant-pagination-item span { 
+  color: rgba(255,255,255,0.85) !important; 
+}
+.dashboard-theme.orange .dashboard-pagination .ant-pagination-item { 
+  background: rgba(250,140,22,0.20) !important; 
+  border-color: rgba(250,140,22,0.30) !important; 
+}
+.dashboard-theme.orange .dashboard-pagination .ant-pagination-item-active { 
+  background: rgba(250,140,22,0.85) !important; 
+  border-color: rgba(250,140,22,0.85) !important; 
+}
+.dashboard-theme.orange .dashboard-pagination .ant-pagination-item-active a,
+.dashboard-theme.orange .dashboard-pagination .ant-pagination-item-active span { 
+  color: #fff !important; 
+}
+.dashboard-theme.orange .dashboard-pagination .ant-pagination-prev .ant-pagination-item-link,
+.dashboard-theme.orange .dashboard-pagination .ant-pagination-next .ant-pagination-item-link { 
+  color: rgba(255,255,255,0.85) !important; 
+  border-color: rgba(250,140,22,0.30) !important; 
+  background: rgba(250,140,22,0.20) !important; 
+}
+
+/* Cyan主题分页样式 */
+.dashboard-theme.cyan .dashboard-pagination .ant-pagination-item a,
+.dashboard-theme.cyan .dashboard-pagination .ant-pagination-item span { 
+  color: rgba(255,255,255,0.85) !important; 
+}
+.dashboard-theme.cyan .dashboard-pagination .ant-pagination-item { 
+  background: rgba(0,170,170,0.18) !important; 
+  border-color: rgba(0,170,170,0.28) !important; 
+}
+.dashboard-theme.cyan .dashboard-pagination .ant-pagination-item-active { 
+  background: rgba(0,170,170,0.85) !important; 
+  border-color: rgba(0,170,170,0.85) !important; 
+}
+.dashboard-theme.cyan .dashboard-pagination .ant-pagination-item-active a,
+.dashboard-theme.cyan .dashboard-pagination .ant-pagination-item-active span { 
+  color: #fff !important; 
+}
+.dashboard-theme.cyan .dashboard-pagination .ant-pagination-prev .ant-pagination-item-link,
+.dashboard-theme.cyan .dashboard-pagination .ant-pagination-next .ant-pagination-item-link { 
+  color: rgba(255,255,255,0.85) !important; 
+  border-color: rgba(0,170,170,0.28) !important; 
+  background: rgba(0,170,170,0.18) !important; 
+}
+
+/* Red主题分页样式 */
+.dashboard-theme.red .dashboard-pagination .ant-pagination-item a,
+.dashboard-theme.red .dashboard-pagination .ant-pagination-item span { 
+  color: rgba(255,255,255,0.85) !important; 
+}
+.dashboard-theme.red .dashboard-pagination .ant-pagination-item { 
+  background: rgba(245,34,45,0.18) !important; 
+  border-color: rgba(245,34,45,0.28) !important; 
+}
+.dashboard-theme.red .dashboard-pagination .ant-pagination-item-active { 
+  background: rgba(245,34,45,0.85) !important; 
+  border-color: rgba(245,34,45,0.85) !important; 
+}
+.dashboard-theme.red .dashboard-pagination .ant-pagination-item-active a,
+.dashboard-theme.red .dashboard-pagination .ant-pagination-item-active span { 
+  color: #fff !important; 
+}
+.dashboard-theme.red .dashboard-pagination .ant-pagination-prev .ant-pagination-item-link,
+.dashboard-theme.red .dashboard-pagination .ant-pagination-next .ant-pagination-item-link { 
+  color: rgba(255,255,255,0.85) !important; 
+  border-color: rgba(245,34,45,0.28) !important; 
+  background: rgba(245,34,45,0.18) !important; 
+}
+
+/* Gold主题分页样式 */
+.dashboard-theme.gold .dashboard-pagination .ant-pagination-item a,
+.dashboard-theme.gold .dashboard-pagination .ant-pagination-item span { 
+  color: rgba(255,255,255,0.85) !important; 
+}
+.dashboard-theme.gold .dashboard-pagination .ant-pagination-item { 
+  background: rgba(212,175,55,0.18) !important; 
+  border-color: rgba(212,175,55,0.28) !important; 
+}
+.dashboard-theme.gold .dashboard-pagination .ant-pagination-item-active { 
+  background: rgba(212,175,55,0.85) !important; 
+  border-color: rgba(212,175,55,0.85) !important; 
+}
+.dashboard-theme.gold .dashboard-pagination .ant-pagination-item-active a,
+.dashboard-theme.gold .dashboard-pagination .ant-pagination-item-active span { 
+  color: #fff !important; 
+}
+.dashboard-theme.gold .dashboard-pagination .ant-pagination-prev .ant-pagination-item-link,
+.dashboard-theme.gold .dashboard-pagination .ant-pagination-next .ant-pagination-item-link { 
+  color: rgba(255,255,255,0.85) !important; 
+  border-color: rgba(212,175,55,0.28) !important; 
+  background: rgba(212,175,55,0.18) !important; 
+}
+
+/* HeaderMetrics 组件专用样式 - 强制红绿色显示 */
+.header-metrics-wrapper .hm-red,
+html body .dashboard-theme .header-metrics-wrapper .hm-red {
+  color: #ff4d4f !important;
+  -webkit-text-fill-color: #ff4d4f !important;
+}
+
+.header-metrics-wrapper .hm-green,
+html body .dashboard-theme .header-metrics-wrapper .hm-green {
+  color: #52c41a !important;
+  -webkit-text-fill-color: #52c41a !important;
+}
+
+/* 页面大小选择器样式 */
+.dashboard-theme.dark .page-size-selector .ant-select-selector,
+.dashboard-theme.blue .page-size-selector .ant-select-selector,
+.dashboard-theme.purple .page-size-selector .ant-select-selector,
+.dashboard-theme.green .page-size-selector .ant-select-selector,
+.dashboard-theme.orange .page-size-selector .ant-select-selector,
+.dashboard-theme.cyan .page-size-selector .ant-select-selector,
+.dashboard-theme.red .page-size-selector .ant-select-selector,
+.dashboard-theme.gold .page-size-selector .ant-select-selector {
+  background: rgba(255,255,255,0.08) !important;
+  border-color: rgba(255,255,255,0.15) !important;
+  color: rgba(255,255,255,0.85) !important;
+}
+
+.dashboard-theme.light .page-size-selector .ant-select-selector {
+  background: rgba(0,0,0,0.03) !important;
+  border-color: rgba(0,0,0,0.08) !important;
+  color: rgba(0,0,0,0.85) !important;
+}
+
+/* 导航容器样式 */
+.navigation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  margin-bottom: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+}
+
+.navigation-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navigation-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.theme-switch-panel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-switch-button {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.8);
+}
+
+.theme-switch-button:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,1);
+}
+
+.current-time {
+  font-size: 16px;
+}
+
+/* 后端状态页面样式 */
+.backend-status-layout {
+  min-height: 100vh;
+}
+
+.backend-status-content {
+  padding: 24px;
+  background: #f0f2f5;
+}
+
+.backend-checking {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.backend-checking-text {
+  margin-top: 16px;
+}
+
+.backend-offline-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.backend-offline-actions {
+  margin-bottom: 24px;
+}
+
+.backend-offline-code {
+  background: #f6f8fa;
+  padding: 12px;
+  border-radius: 4px;
+  border-left: 4px solid #0366d6;
+  margin: 12px 0;
+  font-family: 'Courier New', monospace;
+}
+
+.backend-offline-link {
+  margin-top: 12px;
+}
+
+/* 主题相关样式 */
+.dashboard-theme {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* 隐藏滚动条的样式 */
+.scrollable-container {
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.scrollable-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+/* 为滚动容器添加平滑滚动 */
+.scrollable-container {
+  scroll-behavior: smooth;
+}
+
+/* 可选：添加渐变边缘效果，提示可以滚动 */
+.scrollable-container-with-fade {
+  position: relative;
+}
+
+.scrollable-container-with-fade::before,
+.scrollable-container-with-fade::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.scrollable-container-with-fade::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.1), transparent);
+}
+
+.scrollable-container-with-fade::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0,0,0,0.1), transparent);
+}
+
+/* ========== 主题感知边框样式 ========== */
+
+/* 类型切换Tab - 各主题边框样式 */
+.dashboard-theme.blue .custom-data-type-tabs { background: rgba(23,125,220,0.12) !important; border-color: rgba(23,125,220,0.25) !important; }
+.dashboard-theme.purple .custom-data-type-tabs { background: rgba(114,46,209,0.12) !important; border-color: rgba(114,46,209,0.25) !important; }
+.dashboard-theme.green .custom-data-type-tabs { background: rgba(54,179,126,0.12) !important; border-color: rgba(54,179,126,0.25) !important; }
+.dashboard-theme.orange .custom-data-type-tabs { background: rgba(250,140,22,0.12) !important; border-color: rgba(250,140,22,0.25) !important; }
+.dashboard-theme.cyan .custom-data-type-tabs { background: rgba(0,170,170,0.12) !important; border-color: rgba(0,170,170,0.25) !important; }
+.dashboard-theme.red .custom-data-type-tabs { background: rgba(220,38,38,0.12) !important; border-color: rgba(220,38,38,0.25) !important; }
+.dashboard-theme.gold .custom-data-type-tabs { background: rgba(250,173,20,0.12) !important; border-color: rgba(250,173,20,0.25) !important; }
+
+/* 搜索框 - 各主题边框样式 (针对普通Input组件) */
+.dashboard-theme.dark .search-input-wrapper .ant-input-affix-wrapper { background: rgba(255,255,255,0.08) !important; border-color: rgba(255,255,255,0.15) !important; }
+.dashboard-theme.light .search-input-wrapper .ant-input-affix-wrapper { background: #ffffff !important; border-color: #d9d9d9 !important; }
+.dashboard-theme.blue .search-input-wrapper .ant-input-affix-wrapper { background: rgba(23,125,220,0.12) !important; border-color: rgba(23,125,220,0.25) !important; }
+.dashboard-theme.purple .search-input-wrapper .ant-input-affix-wrapper { background: rgba(114,46,209,0.12) !important; border-color: rgba(114,46,209,0.25) !important; }
+.dashboard-theme.green .search-input-wrapper .ant-input-affix-wrapper { background: rgba(54,179,126,0.12) !important; border-color: rgba(54,179,126,0.25) !important; }
+.dashboard-theme.orange .search-input-wrapper .ant-input-affix-wrapper { background: rgba(250,140,22,0.12) !important; border-color: rgba(250,140,22,0.25) !important; }
+.dashboard-theme.cyan .search-input-wrapper .ant-input-affix-wrapper { background: rgba(0,170,170,0.12) !important; border-color: rgba(0,170,170,0.25) !important; }
+.dashboard-theme.red .search-input-wrapper .ant-input-affix-wrapper { background: rgba(220,38,38,0.12) !important; border-color: rgba(220,38,38,0.25) !important; }
+.dashboard-theme.gold .search-input-wrapper .ant-input-affix-wrapper { background: rgba(250,173,20,0.12) !important; border-color: rgba(250,173,20,0.25) !important; }
+
+/* 全局日期按钮 - 各主题边框样式 */
+.dashboard-theme.blue .trading-calendar-btn { background: rgba(23,125,220,0.12) !important; border-color: rgba(23,125,220,0.25) !important; }
+.dashboard-theme.purple .trading-calendar-btn { background: rgba(114,46,209,0.12) !important; border-color: rgba(114,46,209,0.25) !important; }
+.dashboard-theme.green .trading-calendar-btn { background: rgba(54,179,126,0.12) !important; border-color: rgba(54,179,126,0.25) !important; }
+.dashboard-theme.orange .trading-calendar-btn { background: rgba(250,140,22,0.12) !important; border-color: rgba(250,140,22,0.25) !important; }
+.dashboard-theme.cyan .trading-calendar-btn { background: rgba(0,170,170,0.12) !important; border-color: rgba(0,170,170,0.25) !important; }
+.dashboard-theme.red .trading-calendar-btn { background: rgba(220,38,38,0.12) !important; border-color: rgba(220,38,38,0.25) !important; }
+.dashboard-theme.gold .trading-calendar-btn { background: rgba(250,173,20,0.12) !important; border-color: rgba(250,173,20,0.25) !important; }
+
+/* 分页每页选择器 - 各主题边框样式 */
+.dashboard-theme.blue .page-size-selector .ant-select-selector { background: rgba(23,125,220,0.12) !important; border-color: rgba(23,125,220,0.25) !important; }
+.dashboard-theme.purple .page-size-selector .ant-select-selector { background: rgba(114,46,209,0.12) !important; border-color: rgba(114,46,209,0.25) !important; }
+.dashboard-theme.green .page-size-selector .ant-select-selector { background: rgba(54,179,126,0.12) !important; border-color: rgba(54,179,126,0.25) !important; }
+.dashboard-theme.orange .page-size-selector .ant-select-selector { background: rgba(250,140,22,0.12) !important; border-color: rgba(250,140,22,0.25) !important; }
+.dashboard-theme.cyan .page-size-selector .ant-select-selector { background: rgba(0,170,170,0.12) !important; border-color: rgba(0,170,170,0.25) !important; }
+.dashboard-theme.red .page-size-selector .ant-select-selector { background: rgba(220,38,38,0.12) !important; border-color: rgba(220,38,38,0.25) !important; }
+.dashboard-theme.gold .page-size-selector .ant-select-selector { background: rgba(250,173,20,0.12) !important; border-color: rgba(250,173,20,0.25) !important; }
+
+/* ========== 主题感知边框样式结束 ========== */
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .toolbar-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .custom-data-type-tabs {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+  
+  .search-input-wrapper {
+    width: 100%;
+  }
+  
+  .global-control-panel {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  
+  .pagination-panel {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .navigation-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

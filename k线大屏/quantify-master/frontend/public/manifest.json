@@ -1,0 +1,17 @@
+{
+  "short_name": "股票大屏",
+  "name": "股票K线大屏系统",
+  "description": "专业的股票K线数据展示和分析系统",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#001529",
+  "background_color": "#ffffff",
+  "orientation": "landscape-primary"
+}

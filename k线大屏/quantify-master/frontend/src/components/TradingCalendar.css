@@ -1,0 +1,437 @@
+/* TradingCalendar.css */
+
+/* 模态框主题样式 */
+.trading-calendar.dark .ant-modal-content {
+  background: #1f1f1f !important;
+  border: 1px solid #434343 !important;
+}
+
+.trading-calendar.dark .ant-modal-header {
+  background: #1f1f1f !important;
+  border-bottom: 1px solid #434343 !important;
+}
+
+.trading-calendar.dark .ant-modal-title {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.trading-calendar.light .ant-modal-content {
+  background: #ffffff !important;
+  border: 1px solid #e6e6e6 !important;
+}
+
+.trading-calendar.light .ant-modal-header {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e6e6e6 !important;
+}
+
+/* 模态框关闭按钮样式 */
+.trading-calendar.dark .ant-modal-close {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.trading-calendar.dark .ant-modal-close:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.trading-calendar.light .ant-modal-close {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.trading-calendar.light .ant-modal-close:hover {
+  color: rgba(0, 0, 0, 0.8) !important;
+  background-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+/* 确保关闭按钮图标也有正确的颜色 */
+.trading-calendar.dark .ant-modal-close .anticon {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.trading-calendar.dark .ant-modal-close:hover .anticon {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.trading-calendar.light .ant-modal-close .anticon {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.trading-calendar.light .ant-modal-close:hover .anticon {
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* 日历容器 */
+.calendar-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* react-calendar 基础样式重写 */
+.calendar-wrapper .react-calendar {
+  width: 100%;
+  max-width: 350px;
+  background: transparent;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+}
+
+/* 深色主题日历样式 */
+.trading-calendar.dark .react-calendar {
+  color: #ffffff;
+}
+
+.trading-calendar.dark .react-calendar__navigation button {
+  color: #ffffff;
+  background: #262626;
+  border: 1px solid #434343;
+}
+
+.trading-calendar.dark .react-calendar__navigation button:hover {
+  background: #434343;
+}
+
+.trading-calendar.dark .react-calendar__month-view__weekdays {
+  background: #262626;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.trading-calendar.dark .react-calendar__tile {
+  background: #262626;
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #434343;
+}
+
+.trading-calendar.dark .react-calendar__tile:hover {
+  background: #434343;
+}
+
+/* 浅色主题日历样式 */
+.trading-calendar.light .react-calendar {
+  color: #000000;
+}
+
+.trading-calendar.light .react-calendar__navigation button {
+  color: #000000;
+  background: #fafafa;
+  border: 1px solid #e6e6e6;
+}
+
+.trading-calendar.light .react-calendar__navigation button:hover {
+  background: #e6e6e6;
+}
+
+.trading-calendar.light .react-calendar__month-view__weekdays {
+  background: #fafafa;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.trading-calendar.light .react-calendar__tile {
+  background: #fafafa;
+  color: rgba(0, 0, 0, 0.9);
+  border: 1px solid #e6e6e6;
+}
+
+.trading-calendar.light .react-calendar__tile:hover {
+  background: #e6e6e6;
+}
+
+/* 导航按钮 */
+.react-calendar__navigation {
+  display: flex;
+  height: 44px;
+  margin-bottom: 1em;
+}
+
+.react-calendar__navigation button {
+  min-width: 44px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 4px;
+  margin: 0 2px;
+  transition: all 0.2s ease;
+}
+
+.react-calendar__navigation button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 月份视图 */
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75em;
+  padding: 8px 0;
+  border-radius: 4px;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5em;
+}
+
+/* 日期单元格 */
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 0.75em 0.5em;
+  text-align: center;
+  line-height: 16px;
+  font-size: 0.833em;
+  border-radius: 4px;
+  margin: 1px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+/* 暗色主题下的今天样式 */
+.trading-calendar.dark .react-calendar__tile.today {
+  background: #ff7a00 !important;
+  color: #ffffff !important;
+  font-weight: bold;
+  border: 1px solid #ff9500 !important;
+  position: relative;
+}
+
+.trading-calendar.dark .react-calendar__tile.today:hover {
+  background: #e6660d !important;
+}
+
+/* 浅色主题下的今天样式 */
+.trading-calendar.light .react-calendar__tile.today {
+  background: #faad14 !important;
+  color: #ffffff !important;
+  font-weight: bold;
+  border: 1px solid #d48806;
+  position: relative;
+}
+
+.trading-calendar.light .react-calendar__tile.today:hover {
+  background: #d48806 !important;
+}
+
+/* react-calendar默认今天样式 - 暗色主题 */
+.trading-calendar.dark .react-calendar__tile--now {
+  background: #ff7a00 !important;
+  color: #fff !important;
+  font-weight: bold;
+  border: 1px solid #ff9500 !important;
+}
+
+/* react-calendar默认今天样式 - 浅色主题 */
+.trading-calendar.light .react-calendar__tile--now {
+  background: #faad14 !important;
+  color: #fff !important;
+  font-weight: bold;
+  border: 1px solid #d48806;
+}
+
+/* 选中的日期 */
+.react-calendar__tile--active {
+  background: #1890ff !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+/* 暗色主题下的选中日期 */
+.trading-calendar.dark .react-calendar__tile--active {
+  background: #1677ff !important;
+  color: #ffffff !important;
+  font-weight: bold;
+  border: 1px solid #4096ff !important;
+}
+
+/* 浅色主题下的选中日期 */
+.trading-calendar.light .react-calendar__tile--active {
+  background: #1890ff !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+/* 处理范围选择相关的类名，确保样式一致性 */
+.react-calendar__tile--range,
+.react-calendar__tile--rangeStart,
+.react-calendar__tile--rangeEnd,
+.react-calendar__tile--rangeBothEnds {
+  /* 重置范围选择的默认样式，使用我们的自定义样式 */
+  background: inherit !important;
+}
+
+/* 确保选中的交易日样式正确 */
+.react-calendar__tile--active.trading-day {
+  background: #1890ff !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+/* 暗色主题下的选中交易日 */
+.trading-calendar.dark .react-calendar__tile--active.trading-day {
+  background: #1677ff !important;
+  color: #ffffff !important;
+  font-weight: bold;
+  border: 1px solid #4096ff !important;
+}
+
+/* 浅色主题下的选中交易日 */
+.trading-calendar.light .react-calendar__tile--active.trading-day {
+  background: #1890ff !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+/* 选中的今天样式 */
+.react-calendar__tile--active.today {
+  background: #1890ff !important;
+  color: white !important;
+  border: 1px solid #0f6fff;
+}
+
+/* 暗色主题下选中的今天 */
+.trading-calendar.dark .react-calendar__tile--active.today {
+  background: #1677ff !important;
+  color: #ffffff !important;
+  border: 1px solid #4096ff !important;
+  font-weight: bold;
+}
+
+/* 浅色主题下选中的今天 */
+.trading-calendar.light .react-calendar__tile--active.today {
+  background: #1890ff !important;
+  color: white !important;
+  border: 1px solid #0f6fff;
+  font-weight: bold;
+}
+
+/* 交易日样式 */
+.react-calendar__tile.trading-day {
+  background: rgba(82, 196, 26, 0.15) !important;
+  color: #389e0d !important;
+  font-weight: 500;
+}
+
+.trading-calendar.dark .react-calendar__tile.trading-day {
+  background: rgba(82, 196, 26, 0.2) !important;
+  color: #52c41a !important;
+}
+
+.react-calendar__tile.trading-day:hover {
+  background: rgba(82, 196, 26, 0.25) !important;
+  transform: scale(1.05);
+}
+
+/* 暗色主题下今天同时是交易日的样式 */
+.trading-calendar.dark .react-calendar__tile.today.trading-day {
+  background: #ff7a00 !important;
+  border: 1px solid #ff9500 !important;
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+.trading-calendar.dark .react-calendar__tile.today.trading-day:hover {
+  background: #e6660d !important;
+}
+
+/* 浅色主题下今天同时是交易日的样式 */
+.trading-calendar.light .react-calendar__tile.today.trading-day {
+  background: #faad14 !important;
+  border: 1px solid #d48806 !important;
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+.trading-calendar.light .react-calendar__tile.today.trading-day:hover {
+  background: #d48806 !important;
+}
+
+/* 重写所有可能的范围选择组合，确保样式一致性 */
+.react-calendar__tile--active.react-calendar__tile--range,
+.react-calendar__tile--active.react-calendar__tile--rangeStart,
+.react-calendar__tile--active.react-calendar__tile--rangeEnd,
+.react-calendar__tile--active.react-calendar__tile--rangeBothEnds {
+  background: #1890ff !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+/* 暗色主题下的范围选择样式 */
+.trading-calendar.dark .react-calendar__tile--active.react-calendar__tile--range,
+.trading-calendar.dark .react-calendar__tile--active.react-calendar__tile--rangeStart,
+.trading-calendar.dark .react-calendar__tile--active.react-calendar__tile--rangeEnd,
+.trading-calendar.dark .react-calendar__tile--active.react-calendar__tile--rangeBothEnds {
+  background: #1677ff !important;
+  color: #ffffff !important;
+  font-weight: bold;
+  border: 1px solid #4096ff !important;
+}
+
+/* 确保交易日在选中时的样式 */
+.react-calendar__tile--active.trading-day.react-calendar__tile--range,
+.react-calendar__tile--active.trading-day.react-calendar__tile--rangeStart,
+.react-calendar__tile--active.trading-day.react-calendar__tile--rangeEnd,
+.react-calendar__tile--active.trading-day.react-calendar__tile--rangeBothEnds {
+  background: #1890ff !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+/* 暗色主题下选中交易日的范围选择样式 */
+.trading-calendar.dark .react-calendar__tile--active.trading-day.react-calendar__tile--range,
+.trading-calendar.dark .react-calendar__tile--active.trading-day.react-calendar__tile--rangeStart,
+.trading-calendar.dark .react-calendar__tile--active.trading-day.react-calendar__tile--rangeEnd,
+.trading-calendar.dark .react-calendar__tile--active.trading-day.react-calendar__tile--rangeBothEnds {
+  background: #1677ff !important;
+  color: #ffffff !important;
+  font-weight: bold;
+  border: 1px solid #4096ff !important;
+}
+
+/* 非交易日样式 */
+.react-calendar__tile.non-trading-day {
+  color: rgba(0, 0, 0, 0.4) !important;
+  cursor: not-allowed !important;
+  background: transparent !important;
+}
+
+.trading-calendar.dark .react-calendar__tile.non-trading-day {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* 未来日期样式 */
+.react-calendar__tile.future-date {
+  color: rgba(0, 0, 0, 0.2) !important;
+  cursor: not-allowed !important;
+  background: transparent !important;
+  opacity: 0.5;
+}
+
+.trading-calendar.dark .react-calendar__tile.future-date {
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* 禁用状态 */
+.react-calendar__tile:disabled {
+  cursor: not-allowed !important;
+  opacity: 0.5;
+}
+
+/* 其他月份的日期 */
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.trading-calendar.dark .react-calendar__month-view__days__day--neighboringMonth {
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+  .react-calendar {
+    max-width: 100%;
+  }
+  
+  .react-calendar__tile {
+    padding: 0.5em 0.25em;
+    font-size: 0.75em;
+  }
+}
